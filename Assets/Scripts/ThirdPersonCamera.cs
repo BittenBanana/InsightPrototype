@@ -71,11 +71,11 @@ public class ThirdPersonCamera : MonoBehaviour {
         cameraRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         if (Physics.Raycast(cameraRay, out cameraHit))
         {
-            playerGun.transform.LookAt(cameraHit.point);
+            //playerGun.transform.LookAt(cameraHit.point);
         }
         else
         {
-            playerGun.transform.LookAt(cameraRay.origin + cameraRay.direction * 100);
+            //playerGun.transform.LookAt(cameraRay.origin + cameraRay.direction * 100);
         }
 
         transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, smoothSpeed * Time.deltaTime);
