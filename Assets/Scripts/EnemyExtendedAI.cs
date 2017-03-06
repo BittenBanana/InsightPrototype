@@ -1,19 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyExtendedAI : MonoBehaviour {
     public enum BehaviourState
     {
         Aggresive,
+        Sleep,
         None
     }
 
     public BehaviourState bState { get; private set; }
     GameObject target = null;
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private float startSleepTime = 5;
+    private float sleepTime;
+    // Use this for initialization
+    void Start () {
         bState = BehaviourState.None;
+        sleepTime = startSleepTime;
     }
 	
 	// Update is called once per frame
@@ -27,6 +33,18 @@ public class EnemyExtendedAI : MonoBehaviour {
                     this.transform.position = Vector3.MoveTowards(this.transform.position, target.gameObject.transform.position, .1f);
                     if(Vector3.Distance(this.transform.position, target.transform.position) < 1)
                     {
+                        bState = BehaviourState.None;
+                    }
+                }
+                break;
+            case BehaviourState.Sleep:
+                {          
+                    sleepTime -= Time.deltaTime;
+                    Debug.Log(sleepTime);
+                    if(sleepTime <= 0)
+                    {
+                        sleepTime = startSleepTime;
+                        this.gameObject.GetComponent<NavMeshAgent>().Resume();
                         bState = BehaviourState.None;
                     }
                 }
@@ -45,7 +63,7 @@ public class EnemyExtendedAI : MonoBehaviour {
                 break;
             case BulletType.Sleep:
                 {
-                    Debug.Log("Im asleep");
+                    SleepBullet();
                 }
                 break;
         }
@@ -87,6 +105,16 @@ public class EnemyExtendedAI : MonoBehaviour {
             Debug.Log("Im agresive");
             target = FindNearestEnemy(100).gameObject;
             bState = BehaviourState.Aggresive;
+        }
+    }
+
+    private void SleepBullet()
+    {
+        if(bState != BehaviourState.Sleep)
+        {
+            this.gameObject.GetComponent<NavMeshAgent>().Stop();
+            Debug.Log("I'm asleep----------------------------");
+            bState = BehaviourState.Sleep;
         }
     }
 }
