@@ -46,27 +46,36 @@ public class ShootingScript : MonoBehaviour {
 
     private void Shoot()
     {
-        Ray shootRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+        //Ray shootRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
 
-        if(Physics.Raycast(shootRay.origin, shootRay.direction, out shootHit, 10))
+        //if (Physics.Raycast(shootRay.origin, shootRay.direction, out shootHit, 10))
+        //{
+        //    DrawLine(new Vector3(Screen.width/2, Screen.height / 2), shootHit.point);
+        //    if (shootHit.collider.tag == "Enemy")
+        //    {
+        //        shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
+        //    }
+        //}
+        //else
+        //{
+        //    DrawLine(new Vector3(Screen.width / 2, Screen.height / 2), shootRay.origin + shootRay.direction * 10);
+        //}
+        //Debug.DrawRay(shootRay.origin, shootRay.direction * 10, Color.red, 2);
+        //state = ShootingState.Free;
+        Ray cameraRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+        if(Physics.Raycast(cameraRay, out shootHit))
         {
-            //DrawLine(Hand.transform.position, shootHit.point);
-            if(shootHit.collider.tag == "Enemy")
+            DrawLine(Hand.transform.position, shootHit.point);
+            if (shootHit.collider.tag == "Enemy")
             {
                 shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
             }
         }
-        else
-        {
-            //DrawLine(Hand.transform.position, shootRay.origin + shootRay.direction*10);
-        }
-        Debug.DrawRay(shootRay.origin, shootRay.direction * 10, Color.red, 2);
         state = ShootingState.Free;
     }
 
     private void DrawLine(Vector3 vect, Vector3 vect2)
     {
-
         LineRenderer line = GetComponent<LineRenderer>();
         line.SetPosition(0, vect);
         line.SetPosition(1, vect2);
