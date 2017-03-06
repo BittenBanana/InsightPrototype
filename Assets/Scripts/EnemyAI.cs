@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour {
 
     [SerializeField, Range(0,10)]
     float standPatrolTime;
+    [SerializeField, Range(0, 10)]
+    float standCheckTime;
     [SerializeField, Tooltip("At least 2 or freeze")]
     Transform[] targetPositions;
 
@@ -30,6 +32,9 @@ public class EnemyAI : MonoBehaviour {
     bool changed;
     Vector3 lastKnownLocation;
     Vector3 lastKnownPlayerLocation;
+
+    float patrolTimer;
+    float checkTimer;
 
     private void Awake()
     {
@@ -64,19 +69,15 @@ public class EnemyAI : MonoBehaviour {
         {
             aiState = AIState.CHASE;
         }
-        else
-        {
-            aiState = AIState.PATROL;
-        }
 
         if (sight.playerIsHeard && !sight.playerInSight)
         {
             aiState = AIState.CHECK;
+            lastKnownPlayerLocation = player.transform.position;
         }
-        else if(!sight.playerInSight)
-        {
-            aiState = AIState.PATROL;
-        }
+
+        Debug.Log(aiState);
+
     }
 
     IEnumerator Patrol()
@@ -86,12 +87,15 @@ public class EnemyAI : MonoBehaviour {
             Debug.Log( gameObject.name + ": I'm on patrol");
             if(agent.remainingDistance < agent.stoppingDistance)
             {
-                yield return new WaitForSeconds(standPatrolTime);
-                SetTarget();
-                agent.SetDestination(currentTarget);
-                
+                if (patrolTimer <= 0)
+                {
+                    SetTarget();
+                    agent.SetDestination(currentTarget);
+                    patrolTimer = standPatrolTime;
+                }
+                patrolTimer -= Time.deltaTime;
             }
-            yield return new WaitForSeconds(0.2f);
+            yield return null;
         }
 
         if(aiState == AIState.CHASE)
@@ -133,7 +137,16 @@ public class EnemyAI : MonoBehaviour {
         while (aiState == AIState.CHECK)
         {
             Debug.Log(gameObject.name + ": I heard something there ");
-            yield return new WaitForSeconds(0.2f);
+            agent.SetDestination(lastKnownPlayerLocation);
+            if(agent.remainingDistance < agent.stoppingDistance)
+            {
+                if(checkTimer <= 0)
+                {
+                    aiState = AIState.PATROL;
+                }
+                checkTimer -= Time.deltaTime;
+            }
+            yield return null;
         }
 
         if (aiState == AIState.CHASE)
