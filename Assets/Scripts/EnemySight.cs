@@ -41,7 +41,7 @@ public class EnemySight : MonoBehaviour {
                     if(hit.collider.gameObject == player)
                     {
                         playerInSight = true;
-                        Debug.Log("Player in sight");
+                        //Debug.Log("Player in sight");
                     }
                 }
             }
@@ -50,7 +50,7 @@ public class EnemySight : MonoBehaviour {
             if(CalculatePathLength(player.transform.position) <= col.radius)
             {
                 playerIsHeard = true;
-                Debug.Log("Player heard");
+                //Debug.Log("Player heard");
             }            
         }
     }
