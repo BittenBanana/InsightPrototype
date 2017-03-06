@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyExtendedAI : MonoBehaviour {
-    enum BehaviourState
+    public enum BehaviourState
     {
         Aggresive,
         None
     }
 
-    BehaviourState bState = BehaviourState.None;
+    public BehaviourState bState { get; private set; }
     GameObject target = null;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        bState = BehaviourState.None;
+    }
 	
 	// Update is called once per frame
 	void Update () {

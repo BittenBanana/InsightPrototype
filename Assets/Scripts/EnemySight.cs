@@ -7,7 +7,7 @@ public class EnemySight : MonoBehaviour {
     [SerializeField]
     float fieldOfViewAngle = 110f;
     public bool playerInSight { get; private set; }
-    public bool playerHeard { get; private set; }
+    public bool playerIsHeard { get; private set; }
     public Vector3 personalLastSighting { get; private set; }
 
     private UnityEngine.AI.NavMeshAgent nav;
@@ -27,7 +27,7 @@ public class EnemySight : MonoBehaviour {
         if(other.gameObject == player)
         {
             playerInSight = false;
-            playerHeard = false;
+            playerIsHeard = false;
 
             Vector3 direction = other.transform.position - transform.position;
             float angle = Vector3.Angle(direction, transform.forward);
@@ -49,16 +49,15 @@ public class EnemySight : MonoBehaviour {
 
             if(CalculatePathLength(player.transform.position) <= col.radius)
             {
-                playerHeard = true;
+                playerIsHeard = true;
                 Debug.Log("Player heard");
-            }
-            
+            }            
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        playerHeard = false;
+        playerIsHeard = false;
         playerInSight = false;
     }
 
