@@ -16,8 +16,10 @@ public class EnemyAI : MonoBehaviour {
         EXTENDED
     }
 
-    [SerializeField]
-    List<Transform> targetPositions;
+    [SerializeField, Range(0,10)]
+    float standPatrolTime;
+    [SerializeField, Tooltip("At least 2 or freeze")]
+    Transform[] targetPositions;
 
     GameObject player;
     EnemySight sight;
@@ -26,14 +28,15 @@ public class EnemyAI : MonoBehaviour {
     Vector3 currentTarget;
     EnemyExtendedAI extendedAI;
     bool changed;
+    Vector3 lastKnownLocation;
+    Vector3 lastKnownPlayerLocation;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        targetPositions.Add(transform);
         agent = GetComponent<NavMeshAgent>();
         sight = GetComponent<EnemySight>();
-        currentTarget = transform.position;
+        lastKnownLocation = transform.position;
         extendedAI = GetComponent<EnemyExtendedAI>();
         changed = false;
         aiState = AIState.PATROL;
@@ -81,6 +84,13 @@ public class EnemyAI : MonoBehaviour {
         while (aiState == AIState.PATROL)
         {
             Debug.Log( gameObject.name + ": I'm on patrol");
+            if(agent.remainingDistance < agent.stoppingDistance)
+            {
+                yield return new WaitForSeconds(standPatrolTime);
+                SetTarget();
+                agent.SetDestination(currentTarget);
+                
+            }
             yield return new WaitForSeconds(0.2f);
         }
 
@@ -137,6 +147,16 @@ public class EnemyAI : MonoBehaviour {
         }
 
         yield return null;
+    }
+
+    void SetTarget()
+    {
+        do
+        {
+            currentTarget = targetPositions[Random.Range(0, targetPositions.Length)].position;
+        }
+        while (currentTarget == lastKnownLocation);
+        lastKnownLocation = currentTarget;
     }
 
 }
