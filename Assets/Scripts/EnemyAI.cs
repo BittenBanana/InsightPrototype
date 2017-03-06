@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(EnemySight))]
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(EnemyExtendedAI))]
 public class EnemyAI : MonoBehaviour {
 
     enum AIState

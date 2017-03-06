@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemySight : MonoBehaviour {
 
     [SerializeField]
@@ -10,14 +13,14 @@ public class EnemySight : MonoBehaviour {
     public bool playerIsHeard { get; private set; }
     public Vector3 personalLastSighting { get; private set; }
 
-    private UnityEngine.AI.NavMeshAgent nav;
+    private NavMeshAgent nav;
     private SphereCollider col;
     private GameObject player;
     private Vector3 previousSighting;
 
     void Awake()
     {
-        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        nav = GetComponent<NavMeshAgent>();
         col = GetComponentInChildren<SphereCollider>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -50,8 +53,12 @@ public class EnemySight : MonoBehaviour {
             if(CalculatePathLength(player.transform.position) <= col.radius)
             {
                 playerIsHeard = true;
+                if(player.GetComponent<ThirdPersonCharacter>().mState == ThirdPersonCharacter.MoveState.STAND || player.GetComponent<ThirdPersonCharacter>().mState == ThirdPersonCharacter.MoveState.CROUCH)
+                {
+                    playerIsHeard = false;
+                }
                 //Debug.Log("Player heard");
-            }            
+            }           
         }
     }
 
@@ -63,7 +70,7 @@ public class EnemySight : MonoBehaviour {
 
     float CalculatePathLength(Vector3 targetPosition)
     {
-        UnityEngine.AI.NavMeshPath path = new UnityEngine.AI.NavMeshPath();
+        NavMeshPath path = new NavMeshPath();
 
         if(nav.enabled)
         {
