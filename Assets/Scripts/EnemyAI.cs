@@ -8,7 +8,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(EnemyExtendedAI))]
 public class EnemyAI : MonoBehaviour {
 
-    enum AIState
+    public enum AIState
     {
         PATROL,
         CHECK,
@@ -26,7 +26,7 @@ public class EnemyAI : MonoBehaviour {
     GameObject player;
     EnemySight sight;
     NavMeshAgent agent;
-    AIState aiState;
+    public AIState aiState { get; private set; }
     Vector3 currentTarget;
     EnemyExtendedAI extendedAI;
     bool changed;
