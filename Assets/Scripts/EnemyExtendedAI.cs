@@ -40,7 +40,7 @@ public class EnemyExtendedAI : MonoBehaviour {
             case BehaviourState.Sleep:
                 {          
                     sleepTime -= Time.deltaTime;
-                    Debug.Log(sleepTime);
+
                     if(sleepTime <= 0)
                     {
                         sleepTime = startSleepTime;

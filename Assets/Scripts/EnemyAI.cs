@@ -164,11 +164,16 @@ public class EnemyAI : MonoBehaviour {
 
     void SetTarget()
     {
-        do
+        if (targetPositions.Length >= 2)
         {
-            currentTarget = targetPositions[Random.Range(0, targetPositions.Length)].position;
+            do
+            {
+                currentTarget = targetPositions[Random.Range(0, targetPositions.Length)].position;
+            }
+            while (currentTarget == lastKnownLocation);
         }
-        while (currentTarget == lastKnownLocation);
+        else
+            currentTarget = transform.position;
         lastKnownLocation = currentTarget;
     }
 
