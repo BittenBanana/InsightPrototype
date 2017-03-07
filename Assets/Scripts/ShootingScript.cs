@@ -14,7 +14,7 @@ public class ShootingScript : MonoBehaviour {
     RaycastHit shootHit;
     ShootingState state;
     public GameObject Hand;
-
+    
 
     LineRenderer line;
     // Use this for initialization
@@ -50,6 +50,11 @@ public class ShootingScript : MonoBehaviour {
             currentBullet = BulletType.Deafening;
             Debug.Log("Relodaded to deafening");
         }
+        if(Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            currentBullet = BulletType.WallTransmitter;
+            Debug.Log("Relodaded to wall focus");
+        }
     }
 
     private void FixedUpdate()
@@ -64,22 +69,6 @@ public class ShootingScript : MonoBehaviour {
 
     private void Shoot()
     {
-        //Ray shootRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-
-        //if (Physics.Raycast(shootRay.origin, shootRay.direction, out shootHit, 10))
-        //{
-        //    DrawLine(new Vector3(Screen.width/2, Screen.height / 2), shootHit.point);
-        //    if (shootHit.collider.tag == "Enemy")
-        //    {
-        //        shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
-        //    }
-        //}
-        //else
-        //{
-        //    DrawLine(new Vector3(Screen.width / 2, Screen.height / 2), shootRay.origin + shootRay.direction * 10);
-        //}
-        //Debug.DrawRay(shootRay.origin, shootRay.direction * 10, Color.red, 2);
-        //state = ShootingState.Free;
         Ray cameraRay = new Ray(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f); // Camera.main.ScreenToWorldPoint, Camera.main.transform.forward
         if (Physics.Raycast(cameraRay, out shootHit))
         {
@@ -87,8 +76,13 @@ public class ShootingScript : MonoBehaviour {
             {
                 shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
             }
+            if(shootHit.collider.tag == "Wall")
+            {
+                if(currentBullet == BulletType.WallTransmitter)
+                    Instantiate(Resources.Load("WallProjectile"), shootHit.point, Quaternion.identity);
+            }
         }
-        DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f);
+        //DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f);
         Debug.DrawRay(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f, Color.red, 22.2f);
         state = ShootingState.Free;
     }

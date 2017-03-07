@@ -8,5 +8,7 @@ public enum BulletType
     Sleep,
     Blinding,
     Deafening,
+    WallTransmitter,
     None
 }
+

@@ -59,13 +59,17 @@ public class EnemyAI : MonoBehaviour {
             aiState = AIState.EXTENDED;
             changed = true;
         }
-        else if(changed)
+        //else if(changed)
+        //{
+        //    aiState = AIState.PATROL;
+        //    changed = false;
+        //}
+        if(extendedAI.bState == EnemyExtendedAI.BehaviourState.None)
         {
             aiState = AIState.PATROL;
-            changed = false;
         }
 
-        if(sight.playerInSight)
+        if (sight.playerInSight)
         {
             aiState = AIState.CHASE;
         }

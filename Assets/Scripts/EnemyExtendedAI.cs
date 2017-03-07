@@ -10,6 +10,7 @@ public class EnemyExtendedAI : MonoBehaviour {
         Sleep,
         Blind,
         Deaf,
+        FollowTransmitter,
         None
     }
 
@@ -38,9 +39,12 @@ public class EnemyExtendedAI : MonoBehaviour {
                 break;
             case BehaviourState.Aggresive:
                 {
-                    this.transform.position = Vector3.MoveTowards(this.transform.position, target.gameObject.transform.position, .1f);
-                    if(Vector3.Distance(this.transform.position, target.transform.position) < 1)
+                    this.gameObject.GetComponent<NavMeshAgent>().SetDestination(target.gameObject.transform.position);
+                    //this.transform.position = Vector3.MoveTowards(this.transform.position, target.gameObject.transform.position, .1f);
+                    Debug.Log(Vector3.Distance(this.transform.position, target.transform.position));
+                    if(Vector3.Distance(this.transform.position, target.transform.position) < 3.0f)
                     {
+                        this.gameObject.GetComponent<NavMeshAgent>().ResetPath();
                         bState = BehaviourState.None;
                     }
                 }
@@ -84,6 +88,22 @@ public class EnemyExtendedAI : MonoBehaviour {
                         Debug.Log(this.gameObject.GetComponent<EnemySight>().enemyDeaf);
                         bState = BehaviourState.None;
                     }
+                }
+                break;
+            case BehaviourState.FollowTransmitter:
+                {
+                    if (target != null)
+                    {
+                        this.gameObject.GetComponent<NavMeshAgent>().SetDestination(target.gameObject.transform.position);
+                        if (Vector3.Distance(this.transform.position, target.transform.position) < 3.0f)
+                        {
+                            this.gameObject.GetComponent<NavMeshAgent>().ResetPath();
+                            bState = BehaviourState.None;
+                        }
+                    }
+                    else
+                        bState = BehaviourState.None;
+
                 }
                 break;
         }
@@ -147,7 +167,7 @@ public class EnemyExtendedAI : MonoBehaviour {
 
     private void AggresiveBullet()
     {
-        if(bState != BehaviourState.Aggresive)
+        if(bState == BehaviourState.None)
         {
             Debug.Log("Im agresive");
             target = FindNearestEnemy(100).gameObject;
@@ -157,9 +177,9 @@ public class EnemyExtendedAI : MonoBehaviour {
 
     private void SleepBullet()
     {
-        if(bState != BehaviourState.Sleep)
+        if(bState == BehaviourState.None)
         {
-            this.gameObject.GetComponent<NavMeshAgent>().Stop();
+            this.gameObject.GetComponent<NavMeshAgent>().Stop();//!!!
             this.gameObject.GetComponent<Renderer>().material.color = Color.blue;
             Debug.Log("I'm asleep----------------------------");
             bState = BehaviourState.Sleep;
@@ -168,7 +188,7 @@ public class EnemyExtendedAI : MonoBehaviour {
 
     private void BlindingBullet()
     {
-        if(bState != BehaviourState.Blind)
+        if(bState == BehaviourState.None)
         {
             this.gameObject.GetComponent<EnemySight>().enemyBlind = true;
             Debug.Log("I'm blinded");
@@ -178,13 +198,24 @@ public class EnemyExtendedAI : MonoBehaviour {
 
     private void DeafeningBullet()
     {
-        if (bState != BehaviourState.Deaf)
+        if (bState == BehaviourState.None)
         {
             this.gameObject.GetComponent<EnemySight>().enemyDeaf = true;
             Debug.Log("I'm deafened");
             bState = BehaviourState.Deaf;
         }
     }
+
+    public void FollowTransmitter(GameObject transmitter)
+    {
+        if(bState == BehaviourState.None)
+        {
+            Debug.Log("I'm going to transmitter");
+            target = transmitter;
+            bState = BehaviourState.FollowTransmitter;
+        }
+    }
+
 }
 
 
