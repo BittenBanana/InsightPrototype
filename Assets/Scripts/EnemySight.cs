@@ -11,6 +11,8 @@ public class EnemySight : MonoBehaviour {
     float fieldOfViewAngle = 110f;
     public bool playerInSight { get; private set; }
     public bool playerIsHeard { get; private set; }
+    public bool enemyBlind { get; set; }
+    public bool enemyDeaf { get; set; }
     public Vector3 personalLastSighting { get; private set; }
 
     private NavMeshAgent nav;
@@ -35,30 +37,40 @@ public class EnemySight : MonoBehaviour {
             Vector3 direction = other.transform.position - transform.position;
             float angle = Vector3.Angle(direction, transform.forward);
 
-            if(angle < fieldOfViewAngle * 0.5f)
+           
+            
+            if (angle < fieldOfViewAngle * 0.5f)
             {
                 RaycastHit hit;
 
-                if(Physics.Raycast(transform.position, direction.normalized, out hit, col.radius))
+                if (Physics.Raycast(transform.position, direction.normalized, out hit, col.radius))
                 {
-                    if(hit.collider.gameObject == player)
+                    if (hit.collider.gameObject == player)
                     {
-                        playerInSight = true;
+                    if (enemyBlind == false)
+                            playerInSight = true;
                         //Debug.Log("Player in sight");
                     }
                 }
             }
+            
+            
 
-
-            if(CalculatePathLength(player.transform.position) <= col.radius)
+            
+            
+            if (CalculatePathLength(player.transform.position) <= col.radius)
             {
-                playerIsHeard = true;
-                if(player.GetComponent<ThirdPersonCharacter>().mState == ThirdPersonCharacter.MoveState.STAND || player.GetComponent<ThirdPersonCharacter>().mState == ThirdPersonCharacter.MoveState.CROUCH)
+                Debug.Log(enemyDeaf + "--------------------------------------------------------");
+                if (enemyDeaf == false)
+                    playerIsHeard = true;
+                if (player.GetComponent<ThirdPersonCharacter>().mState == ThirdPersonCharacter.MoveState.STAND || player.GetComponent<ThirdPersonCharacter>().mState == ThirdPersonCharacter.MoveState.CROUCH)
                 {
                     playerIsHeard = false;
                 }
                 //Debug.Log("Player heard");
-            }           
+            }
+            
+                    
         }
     }
 

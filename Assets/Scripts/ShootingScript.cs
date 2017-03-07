@@ -34,6 +34,16 @@ public class ShootingScript : MonoBehaviour {
             currentBullet = BulletType.Sleep;
             Debug.Log("Relodaded to asleep");
         }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentBullet = BulletType.Blinding;
+            Debug.Log("Relodaded to blinding");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            currentBullet = BulletType.Deafening;
+            Debug.Log("Relodaded to deafening");
+        }
     }
 
     private void FixedUpdate()
