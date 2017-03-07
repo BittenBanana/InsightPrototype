@@ -14,13 +14,19 @@ public class ShootingScript : MonoBehaviour {
     RaycastHit shootHit;
     ShootingState state;
     public GameObject Hand;
-	// Use this for initialization
-	void Start () {
+
+
+    LineRenderer line;
+    // Use this for initialization
+    void Start () {
         state = ShootingState.Free;
         currentBullet = BulletType.None;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-	}
+        line = GetComponent<LineRenderer>();
+        line.startWidth = 0.1f;
+        line.endWidth = 0.1f;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -74,21 +80,21 @@ public class ShootingScript : MonoBehaviour {
         //}
         //Debug.DrawRay(shootRay.origin, shootRay.direction * 10, Color.red, 2);
         //state = ShootingState.Free;
-        Ray cameraRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-        if(Physics.Raycast(cameraRay, out shootHit))
+        Ray cameraRay = new Ray(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f); // Camera.main.ScreenToWorldPoint, Camera.main.transform.forward
+        if (Physics.Raycast(cameraRay, out shootHit))
         {
-            DrawLine(Hand.transform.position, shootHit.point);
             if (shootHit.collider.tag == "Enemy")
             {
                 shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
             }
         }
+        DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f);
+        Debug.DrawRay(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f, Color.red, 22.2f);
         state = ShootingState.Free;
     }
 
     private void DrawLine(Vector3 vect, Vector3 vect2)
     {
-        LineRenderer line = GetComponent<LineRenderer>();
         line.SetPosition(0, vect);
         line.SetPosition(1, vect2);
     }
