@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: 52dcf08699606f943a7e8485babd6e1f
+timeCreated: 1488917441
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box002
+    100002: Box003
+    100004: Box004
+    100006: Box005
+    100008: Box006
+    100010: Box007
+    100012: Box008
+    100014: Box009
+    100016: Box010
+    100018: Box011
+    100020: Box012
+    100022: Box013
+    100024: Box014
+    100026: Box015
+    100028: Box016
+    100030: corner_corridor
+    100032: czytnik kart
+    100034: krzeslo
+    100036: lab room
+    100038: //RootNode
+    100040: machine
+    100042: minidesk
+    100044: minidesk001
+    100046: monitor
+    100048: monitor014
+    100050: monitor015
+    100052: monitor016
+    100054: monitor017
+    100056: monitor018
+    100058: monitor019
+    100060: stol
+    100062: straight_corridor
+    100064: straight_corridor001
+    100066: straight_corridor002
+    100068: straight_corridor003
+    400000: Box002
+    400002: Box003
+    400004: Box004
+    400006: Box005
+    400008: Box006
+    400010: Box007
+    400012: Box008
+    400014: Box009
+    400016: Box010
+    400018: Box011
+    400020: Box012
+    400022: Box013
+    400024: Box014
+    400026: Box015
+    400028: Box016
+    400030: corner_corridor
+    400032: czytnik kart
+    400034: krzeslo
+    400036: lab room
+    400038: //RootNode
+    400040: machine
+    400042: minidesk
+    400044: minidesk001
+    400046: monitor
+    400048: monitor014
+    400050: monitor015
+    400052: monitor016
+    400054: monitor017
+    400056: monitor018
+    400058: monitor019
+    400060: stol
+    400062: straight_corridor
+    400064: straight_corridor001
+    400066: straight_corridor002
+    400068: straight_corridor003
+    2300000: Box002
+    2300002: Box003
+    2300004: Box004
+    2300006: Box005
+    2300008: Box006
+    2300010: Box007
+    2300012: Box008
+    2300014: Box009
+    2300016: Box010
+    2300018: Box011
+    2300020: Box012
+    2300022: Box013
+    2300024: Box014
+    2300026: Box015
+    2300028: Box016
+    2300030: corner_corridor
+    2300032: czytnik kart
+    2300034: krzeslo
+    2300036: lab room
+    2300038: machine
+    2300040: minidesk
+    2300042: minidesk001
+    2300044: monitor
+    2300046: monitor014
+    2300048: monitor015
+    2300050: monitor016
+    2300052: monitor017
+    2300054: monitor018
+    2300056: monitor019
+    2300058: stol
+    2300060: straight_corridor
+    2300062: straight_corridor001
+    2300064: straight_corridor002
+    2300066: straight_corridor003
+    3300000: Box002
+    3300002: Box003
+    3300004: Box004
+    3300006: Box005
+    3300008: Box006
+    3300010: Box007
+    3300012: Box008
+    3300014: Box009
+    3300016: Box010
+    3300018: Box011
+    3300020: Box012
+    3300022: Box013
+    3300024: Box014
+    3300026: Box015
+    3300028: Box016
+    3300030: corner_corridor
+    3300032: czytnik kart
+    3300034: krzeslo
+    3300036: lab room
+    3300038: machine
+    3300040: minidesk
+    3300042: minidesk001
+    3300044: monitor
+    3300046: monitor014
+    3300048: monitor015
+    3300050: monitor016
+    3300052: monitor017
+    3300054: monitor018
+    3300056: monitor019
+    3300058: stol
+    3300060: straight_corridor
+    3300062: straight_corridor001
+    3300064: straight_corridor002
+    3300066: straight_corridor003
+    4300000: straight_corridor001
+    4300002: corner_corridor
+    4300004: lab room
+    4300006: Box002
+    4300008: stol
+    4300010: machine
+    4300012: minidesk
+    4300014: monitor
+    4300016: minidesk001
+    4300018: monitor018
+    4300020: krzeslo
+    4300022: czytnik kart
+    4300024: Box013
+    4300026: Box015
+    4300028: Box016
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
