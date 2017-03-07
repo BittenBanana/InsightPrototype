@@ -52,6 +52,7 @@ public class EnemyExtendedAI : MonoBehaviour {
                     if(sleepTime <= 0)
                     {
                         sleepTime = startSleepTime;
+                        this.gameObject.GetComponent<Renderer>().material.color = Color.red;
                         this.gameObject.GetComponent<NavMeshAgent>().Resume();
                         bState = BehaviourState.None;
                     }
@@ -159,6 +160,7 @@ public class EnemyExtendedAI : MonoBehaviour {
         if(bState != BehaviourState.Sleep)
         {
             this.gameObject.GetComponent<NavMeshAgent>().Stop();
+            this.gameObject.GetComponent<Renderer>().material.color = Color.blue;
             Debug.Log("I'm asleep----------------------------");
             bState = BehaviourState.Sleep;
         }
