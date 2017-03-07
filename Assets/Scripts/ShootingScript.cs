@@ -18,6 +18,8 @@ public class ShootingScript : MonoBehaviour {
 	void Start () {
         state = ShootingState.Free;
         currentBullet = BulletType.None;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
