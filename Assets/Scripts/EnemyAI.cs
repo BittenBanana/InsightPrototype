@@ -16,10 +16,14 @@ public class EnemyAI : MonoBehaviour {
         EXTENDED
     }
 
-    [SerializeField, Range(0,10)]
+    [SerializeField, Range(0, 10)]
     float standPatrolTime;
     [SerializeField, Range(0, 10)]
     float standCheckTime;
+    [SerializeField, Range(0, 10)]
+    float standChaseTime;
+    [SerializeField, Range(0.25f, 0.74f)]
+    float fireRate;
     [SerializeField, Tooltip("At least 2 or freeze")]
     Transform[] targetPositions;
 
@@ -35,6 +39,8 @@ public class EnemyAI : MonoBehaviour {
 
     float patrolTimer;
     float checkTimer;
+    float fireTimer;
+    float chaseTimer;
 
     private void Awake()
     {
@@ -50,6 +56,10 @@ public class EnemyAI : MonoBehaviour {
     private void Start()
     {
         StartCoroutine(Patrol());
+        patrolTimer = 0;
+        checkTimer = standCheckTime;
+        chaseTimer = standChaseTime;
+        fireTimer = 0;
     }
 
     private void Update()
@@ -57,21 +67,20 @@ public class EnemyAI : MonoBehaviour {
         if(extendedAI.bState != EnemyExtendedAI.BehaviourState.None)
         {
             aiState = AIState.EXTENDED;
+            StopAllCoroutines();
             changed = true;
         }
-        //else if(changed)
-        //{
-        //    aiState = AIState.PATROL;
-        //    changed = false;
-        //}
-        if(extendedAI.bState == EnemyExtendedAI.BehaviourState.None)
+        else if (changed)
         {
             aiState = AIState.PATROL;
+            StartCoroutine(Patrol());
+            changed = false;
         }
 
         if (sight.playerInSight)
         {
             aiState = AIState.CHASE;
+            lastKnownPlayerLocation = player.transform.position;
         }
 
         if (sight.playerIsHeard && !sight.playerInSight)
@@ -120,8 +129,21 @@ public class EnemyAI : MonoBehaviour {
         while (aiState == AIState.CHASE)
         {
             Debug.Log(gameObject.name + ": I'm chasing player");
-            Shoot();
-            yield return new WaitForSeconds(0.2f);
+            agent.SetDestination(SetChaseTarget());
+            if (sight.playerInSight)
+            {
+                Shoot();
+            }
+            if (agent.remainingDistance < agent.stoppingDistance)
+            {
+                if(chaseTimer <= 0)
+                {
+                    aiState = AIState.PATROL;
+                    chaseTimer = standChaseTime;
+                }
+                chaseTimer -= Time.deltaTime;             
+            }
+            yield return null;
         }
 
         if (aiState == AIState.PATROL)
@@ -148,6 +170,7 @@ public class EnemyAI : MonoBehaviour {
                 if(checkTimer <= 0)
                 {
                     aiState = AIState.PATROL;
+                    checkTimer = standCheckTime;
                 }
                 checkTimer -= Time.deltaTime;
             }
@@ -182,20 +205,33 @@ public class EnemyAI : MonoBehaviour {
         lastKnownLocation = currentTarget;
     }
 
+    Vector3 SetChaseTarget()
+    {
+        Vector3 direction = lastKnownPlayerLocation - transform.position;
+        Vector3 destination = lastKnownPlayerLocation - (direction.normalized * 4);
+        return destination;
+    }
+
     void Shoot()
     {
-        RaycastHit hit;
+        if (fireTimer <= 0)
+        {
+            RaycastHit hit;
 
-        Vector3 direction = player.transform.position - transform.position + Vector3.up + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.25f, 0.25f), Random.Range(-0.5f, 0.5f));
+            Vector3 direction = player.transform.position - transform.position + Vector3.up + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.25f, 0.25f), Random.Range(-0.5f, 0.5f));
 
-        Debug.DrawRay(transform.position, direction * 100, Color.red, 0.5f);
+            Debug.DrawRay(transform.position, direction * 100, Color.red, 0.5f);
 
-        if(Physics.Raycast(transform.position,direction.normalized, out hit, 100f)){
-            if(hit.collider.gameObject == player)
+            if (Physics.Raycast(transform.position, direction.normalized, out hit, 100f))
             {
+                if (hit.collider.gameObject == player)
+                {
 
+                }
             }
+            fireTimer = fireRate;
         }
+        fireTimer -= Time.deltaTime;
     }
 
 }
