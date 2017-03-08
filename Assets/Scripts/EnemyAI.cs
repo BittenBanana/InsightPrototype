@@ -116,6 +116,7 @@ public class EnemyAI : MonoBehaviour {
         while (aiState == AIState.CHASE)
         {
             Debug.Log(gameObject.name + ": I'm chasing player");
+            Shoot();
             yield return new WaitForSeconds(0.2f);
         }
 
@@ -175,6 +176,22 @@ public class EnemyAI : MonoBehaviour {
         else
             currentTarget = transform.position;
         lastKnownLocation = currentTarget;
+    }
+
+    void Shoot()
+    {
+        RaycastHit hit;
+
+        Vector3 direction = player.transform.position - transform.position + Vector3.up + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.25f, 0.25f), Random.Range(-0.5f, 0.5f));
+
+        Debug.DrawRay(transform.position, direction * 100, Color.red, 0.5f);
+
+        if(Physics.Raycast(transform.position,direction.normalized, out hit, 100f)){
+            if(hit.collider.gameObject == player)
+            {
+
+            }
+        }
     }
 
 }
