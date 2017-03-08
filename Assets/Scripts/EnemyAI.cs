@@ -218,7 +218,8 @@ public class EnemyAI : MonoBehaviour {
         {
             RaycastHit hit;
 
-            Vector3 direction = player.transform.position - transform.position + Vector3.up + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.25f, 0.25f), Random.Range(-0.5f, 0.5f));
+            Vector3 direction = player.transform.position - transform.position + Vector3.up;
+            direction += new Vector3(Random.Range(-0.5f, 0.5f) * agent.velocity.magnitude, Random.Range(-0.25f, 0.25f) * agent.velocity.magnitude, Random.Range(-0.5f, 0.5f)* agent.velocity.magnitude);
 
             Debug.DrawRay(transform.position, direction * 100, Color.red, 0.5f);
 
@@ -226,7 +227,8 @@ public class EnemyAI : MonoBehaviour {
             {
                 if (hit.collider.gameObject == player)
                 {
-
+                    Debug.Log("Player Got Shoot");
+                    
                 }
             }
             fireTimer = fireRate;
