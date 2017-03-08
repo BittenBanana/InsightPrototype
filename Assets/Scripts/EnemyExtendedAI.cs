@@ -8,6 +8,9 @@ public class EnemyExtendedAI : MonoBehaviour {
     {
         Aggresive,
         Sleep,
+        Blind,
+        Deaf,
+        FollowTransmitter,
         None
     }
 
@@ -16,10 +19,16 @@ public class EnemyExtendedAI : MonoBehaviour {
     [SerializeField]
     private float startSleepTime = 5;
     private float sleepTime;
+    private float startBlindTime = 5;
+    private float blindTime;
+    private float startDeafTime = 5;
+    private float deafTime;
     // Use this for initialization
     void Start () {
         bState = BehaviourState.None;
         sleepTime = startSleepTime;
+        blindTime = startBlindTime;
+        deafTime = startDeafTime;
     }
 	
 	// Update is called once per frame
@@ -30,9 +39,12 @@ public class EnemyExtendedAI : MonoBehaviour {
                 break;
             case BehaviourState.Aggresive:
                 {
-                    this.transform.position = Vector3.MoveTowards(this.transform.position, target.gameObject.transform.position, .1f);
-                    if(Vector3.Distance(this.transform.position, target.transform.position) < 1)
+                    this.gameObject.GetComponent<NavMeshAgent>().SetDestination(target.gameObject.transform.position);
+                    //this.transform.position = Vector3.MoveTowards(this.transform.position, target.gameObject.transform.position, .1f);
+                    Debug.Log(Vector3.Distance(this.transform.position, target.transform.position));
+                    if(Vector3.Distance(this.transform.position, target.transform.position) < 3.0f)
                     {
+                        this.gameObject.GetComponent<NavMeshAgent>().ResetPath();
                         bState = BehaviourState.None;
                     }
                 }
@@ -44,9 +56,54 @@ public class EnemyExtendedAI : MonoBehaviour {
                     if(sleepTime <= 0)
                     {
                         sleepTime = startSleepTime;
+                        this.gameObject.GetComponent<Renderer>().material.color = Color.red;
                         this.gameObject.GetComponent<NavMeshAgent>().Resume();
                         bState = BehaviourState.None;
                     }
+                }
+                break;
+            case BehaviourState.Blind:
+                {
+                    blindTime -= Time.deltaTime;
+                    Debug.Log(blindTime);
+
+                    if(blindTime <= 0)
+                    {
+                        blindTime = startBlindTime;
+                        this.gameObject.GetComponent<EnemySight>().enemyBlind = false;
+                        
+                        bState = BehaviourState.None;
+                    }
+                }
+                break;
+            case BehaviourState.Deaf:
+                {
+                    deafTime -= Time.deltaTime;
+                    Debug.Log(deafTime);
+
+                    if (deafTime <= 0)
+                    {
+                        deafTime = startDeafTime;
+                        this.gameObject.GetComponent<EnemySight>().enemyDeaf = false;
+                        Debug.Log(this.gameObject.GetComponent<EnemySight>().enemyDeaf);
+                        bState = BehaviourState.None;
+                    }
+                }
+                break;
+            case BehaviourState.FollowTransmitter:
+                {
+                    if (target != null)
+                    {
+                        this.gameObject.GetComponent<NavMeshAgent>().SetDestination(target.gameObject.transform.position);
+                        if (Vector3.Distance(this.transform.position, target.transform.position) < 3.0f)
+                        {
+                            this.gameObject.GetComponent<NavMeshAgent>().ResetPath();
+                            bState = BehaviourState.None;
+                        }
+                    }
+                    else
+                        bState = BehaviourState.None;
+
                 }
                 break;
         }
@@ -64,6 +121,16 @@ public class EnemyExtendedAI : MonoBehaviour {
             case BulletType.Sleep:
                 {
                     SleepBullet();
+                }
+                break;
+            case BulletType.Blinding:
+                {
+                    BlindingBullet();
+                }
+                break;
+            case BulletType.Deafening:
+                {
+                    DeafeningBullet();
                 }
                 break;
         }
@@ -100,7 +167,7 @@ public class EnemyExtendedAI : MonoBehaviour {
 
     private void AggresiveBullet()
     {
-        if(bState != BehaviourState.Aggresive)
+        if(bState == BehaviourState.None)
         {
             Debug.Log("Im agresive");
             target = FindNearestEnemy(100).gameObject;
@@ -110,13 +177,45 @@ public class EnemyExtendedAI : MonoBehaviour {
 
     private void SleepBullet()
     {
-        if(bState != BehaviourState.Sleep)
+        if(bState == BehaviourState.None)
         {
-            this.gameObject.GetComponent<NavMeshAgent>().Stop();
+            this.gameObject.GetComponent<NavMeshAgent>().Stop();//!!!
+            this.gameObject.GetComponent<Renderer>().material.color = Color.blue;
             Debug.Log("I'm asleep----------------------------");
             bState = BehaviourState.Sleep;
         }
     }
+
+    private void BlindingBullet()
+    {
+        if(bState == BehaviourState.None)
+        {
+            this.gameObject.GetComponent<EnemySight>().enemyBlind = true;
+            Debug.Log("I'm blinded");
+            bState = BehaviourState.Blind;
+        }
+    }
+
+    private void DeafeningBullet()
+    {
+        if (bState == BehaviourState.None)
+        {
+            this.gameObject.GetComponent<EnemySight>().enemyDeaf = true;
+            Debug.Log("I'm deafened");
+            bState = BehaviourState.Deaf;
+        }
+    }
+
+    public void FollowTransmitter(GameObject transmitter)
+    {
+        if(bState == BehaviourState.None)
+        {
+            Debug.Log("I'm going to transmitter");
+            target = transmitter;
+            bState = BehaviourState.FollowTransmitter;
+        }
+    }
+
 }
 
 

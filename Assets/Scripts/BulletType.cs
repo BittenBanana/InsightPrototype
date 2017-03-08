@@ -6,5 +6,9 @@ public enum BulletType
 {
     Aggresive,
     Sleep,
+    Blinding,
+    Deafening,
+    WallTransmitter,
     None
 }
+
