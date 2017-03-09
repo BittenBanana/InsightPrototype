@@ -9,6 +9,8 @@ public enum BulletType
     Blinding,
     Deafening,
     WallTransmitter,
+    WallVisibility,
+    VFX,
     None
 }
 

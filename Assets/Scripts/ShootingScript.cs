@@ -14,7 +14,11 @@ public class ShootingScript : MonoBehaviour {
     RaycastHit shootHit;
     ShootingState state;
     public GameObject Hand;
-    
+    /// <summary>
+    /// tmp
+    /// </summary>
+    bool vfxBulletState = false;
+    GameObject vfxButtet;
 
     LineRenderer line;
     // Use this for initialization
@@ -55,6 +59,21 @@ public class ShootingScript : MonoBehaviour {
             currentBullet = BulletType.WallTransmitter;
             Debug.Log("Relodaded to wall focus");
         }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            currentBullet = BulletType.WallVisibility;
+            Debug.Log("Relodaded to wall visibility");
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            currentBullet = BulletType.VFX;
+            Debug.Log("RAINBOOOOOOW");
+        }
+
+        if(vfxBulletState)
+        {
+            vfxButtet.transform.position = Vector3.MoveTowards(vfxButtet.transform.position, shootHit.point, 0.5f);
+        }
     }
 
     private void FixedUpdate()
@@ -72,18 +91,33 @@ public class ShootingScript : MonoBehaviour {
         Ray cameraRay = new Ray(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f); // Camera.main.ScreenToWorldPoint, Camera.main.transform.forward
         if (Physics.Raycast(cameraRay, out shootHit))
         {
-            if (shootHit.collider.tag == "Enemy")
+            if (currentBullet != BulletType.VFX)
             {
-                shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
+                if (shootHit.collider.tag == "Enemy")
+                {
+                    shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
+                }
+                if (shootHit.collider.tag == "Wall")
+                {
+                    if (currentBullet == BulletType.WallTransmitter)
+                    {
+                        Instantiate(Resources.Load("WallTransmitter"), shootHit.point, Quaternion.identity);
+                    }
+                    if (currentBullet == BulletType.WallVisibility)
+                    {
+                        Instantiate(Resources.Load("WallSight"), shootHit.point, Quaternion.identity);
+                    }
+
+                }
             }
-            if(shootHit.collider.tag == "Wall")
+            else
             {
-                if(currentBullet == BulletType.WallTransmitter)
-                    Instantiate(Resources.Load("WallProjectile"), shootHit.point, Quaternion.identity);
+                vfxButtet = (GameObject)Instantiate(Resources.Load("ParticleVFX"), Hand.transform.position, Quaternion.identity);
+                vfxBulletState = true;
             }
         }
         //DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f);
-        Debug.DrawRay(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f, Color.red, 22.2f);
+        //Debug.DrawRay(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f, Color.red, 22.2f);
         state = ShootingState.Free;
     }
 

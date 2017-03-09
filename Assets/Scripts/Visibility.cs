@@ -15,8 +15,9 @@ public class Visibility : MonoBehaviour {
     Material visible;
 
     Renderer r;
-    VisibilityState vState;
-
+    VisibilityState vState { get; set; }
+    float elapsedTime;
+    float visibilityMaxTime = 5;
 	// Use this for initialization
 	void Start () {
         vState = VisibilityState.NORMAL;
@@ -25,17 +26,29 @@ public class Visibility : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.V)) {
-            if(vState == VisibilityState.NORMAL)
-            {
-                r.material = visible;
-                vState = VisibilityState.VISIBLE;
-            }
-            else
-            {
-                r.material = normal;
-                vState = VisibilityState.NORMAL;
-            }
+        elapsedTime += Time.deltaTime;
+
+        if(elapsedTime >= visibilityMaxTime)
+        {
+            SetVisible(VisibilityState.NORMAL);
+            elapsedTime = 0;
         }
 	}
+
+    public void SetVisible(VisibilityState state)
+    {
+        switch(state)
+        {
+            case VisibilityState.NORMAL:
+                {
+                    r.material = normal;
+                }
+                break;
+            case VisibilityState.VISIBLE:
+                {
+                    r.material = visible;
+                }
+                break;
+        }
+    }
 }
