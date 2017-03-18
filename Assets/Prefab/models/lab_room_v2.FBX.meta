@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 39749c9e52b57d549b0b08922f3e5bec
+timeCreated: 1489844464
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BigBox
+    100002: intercom
+    100004: //RootNode
+    100006: machine
+    100008: minidesk001
+    100010: monitor014
+    100012: monitor015
+    100014: monitor016
+    100016: monitor017
+    100018: monitor018
+    100020: monitor019
+    100022: room
+    100024: stol
+    100026: Bip001
+    100028: Bip001 Head
+    100030: Bip001 L Calf
+    100032: Bip001 L Clavicle
+    100034: Bip001 L Finger0
+    100036: Bip001 L Foot
+    100038: Bip001 L Forearm
+    100040: Bip001 L Hand
+    100042: Bip001 L Thigh
+    100044: Bip001 L Toe0
+    100046: Bip001 L Toe01
+    100048: Bip001 L Toe02
+    100050: Bip001 L UpperArm
+    100052: Bip001 Neck
+    100054: Bip001 Pelvis
+    100056: Bip001 R Calf
+    100058: Bip001 R Clavicle
+    100060: Bip001 R Finger0
+    100062: Bip001 R Foot
+    100064: Bip001 R Forearm
+    100066: Bip001 R Hand
+    100068: Bip001 R Thigh
+    100070: Bip001 R Toe0
+    100072: Bip001 R Toe01
+    100074: Bip001 R Toe02
+    100076: Bip001 R UpperArm
+    100078: Bip001 Spine
+    100080: Bip001 Spine1
+    100082: Bip001 Spine2
+    100084: Bip001 Spine3
+    100086: minidesk002
+    100088: monitor020
+    100090: monitor021
+    400000: BigBox
+    400002: intercom
+    400004: //RootNode
+    400006: machine
+    400008: minidesk001
+    400010: monitor014
+    400012: monitor015
+    400014: monitor016
+    400016: monitor017
+    400018: monitor018
+    400020: monitor019
+    400022: room
+    400024: stol
+    400026: Bip001
+    400028: Bip001 Head
+    400030: Bip001 L Calf
+    400032: Bip001 L Clavicle
+    400034: Bip001 L Finger0
+    400036: Bip001 L Foot
+    400038: Bip001 L Forearm
+    400040: Bip001 L Hand
+    400042: Bip001 L Thigh
+    400044: Bip001 L Toe0
+    400046: Bip001 L Toe01
+    400048: Bip001 L Toe02
+    400050: Bip001 L UpperArm
+    400052: Bip001 Neck
+    400054: Bip001 Pelvis
+    400056: Bip001 R Calf
+    400058: Bip001 R Clavicle
+    400060: Bip001 R Finger0
+    400062: Bip001 R Foot
+    400064: Bip001 R Forearm
+    400066: Bip001 R Hand
+    400068: Bip001 R Thigh
+    400070: Bip001 R Toe0
+    400072: Bip001 R Toe01
+    400074: Bip001 R Toe02
+    400076: Bip001 R UpperArm
+    400078: Bip001 Spine
+    400080: Bip001 Spine1
+    400082: Bip001 Spine2
+    400084: Bip001 Spine3
+    400086: minidesk002
+    400088: monitor020
+    400090: monitor021
+    2300000: BigBox
+    2300002: intercom
+    2300004: machine
+    2300006: minidesk001
+    2300008: monitor014
+    2300010: monitor015
+    2300012: monitor016
+    2300014: monitor017
+    2300016: monitor018
+    2300018: monitor019
+    2300020: room
+    2300022: stol
+    2300024: minidesk002
+    2300026: monitor020
+    2300028: monitor021
+    3300000: BigBox
+    3300002: intercom
+    3300004: machine
+    3300006: minidesk001
+    3300008: monitor014
+    3300010: monitor015
+    3300012: monitor016
+    3300014: monitor017
+    3300016: monitor018
+    3300018: monitor019
+    3300020: room
+    3300022: stol
+    3300024: minidesk002
+    3300026: monitor020
+    3300028: monitor021
+    4300000: stol
+    4300002: machine
+    4300004: minidesk001
+    4300006: monitor018
+    4300008: BigBox
+    4300010: room
+    4300012: intercom
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
