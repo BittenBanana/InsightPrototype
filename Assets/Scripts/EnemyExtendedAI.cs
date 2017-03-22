@@ -23,12 +23,15 @@ public class EnemyExtendedAI : MonoBehaviour {
     private float blindTime;
     private float startDeafTime = 5;
     private float deafTime;
+    private float startAttackTime = 0.8f;
+    private float attackTime;
     // Use this for initialization
     void Start () {
         bState = BehaviourState.None;
         sleepTime = startSleepTime;
         blindTime = startBlindTime;
         deafTime = startDeafTime;
+        attackTime = startAttackTime;
     }
 	
 	// Update is called once per frame
@@ -41,11 +44,17 @@ public class EnemyExtendedAI : MonoBehaviour {
                 {
                     this.gameObject.GetComponent<NavMeshAgent>().SetDestination(target.gameObject.transform.position);
                     //this.transform.position = Vector3.MoveTowards(this.transform.position, target.gameObject.transform.position, .1f);
-                    Debug.Log(Vector3.Distance(this.transform.position, target.transform.position));
+                    //Debug.Log(Vector3.Distance(this.transform.position, target.transform.position));
                     if(Vector3.Distance(this.transform.position, target.transform.position) < 3.0f)
                     {
-                        this.gameObject.GetComponent<NavMeshAgent>().ResetPath();
-                        bState = BehaviourState.None;
+                        attackTime -= Time.deltaTime;
+                        if(attackTime <= 0 && target.activeInHierarchy)
+                        {
+                            attackTime = startAttackTime;
+                            target.GetComponent<EnemyController>().enemyHit();
+                        }
+                        //gameObject.GetComponent<NavMeshAgent>().ResetPath();
+                        //bState = BehaviourState.None;
                     }
                 }
                 break;
@@ -65,7 +74,7 @@ public class EnemyExtendedAI : MonoBehaviour {
             case BehaviourState.Blind:
                 {
                     blindTime -= Time.deltaTime;
-                    Debug.Log(blindTime);
+                    //Debug.Log(blindTime);
 
                     if(blindTime <= 0)
                     {
@@ -79,7 +88,7 @@ public class EnemyExtendedAI : MonoBehaviour {
             case BehaviourState.Deaf:
                 {
                     deafTime -= Time.deltaTime;
-                    Debug.Log(deafTime);
+                    //Debug.Log(deafTime);
 
                     if (deafTime <= 0)
                     {
