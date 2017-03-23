@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShootingScript : MonoBehaviour {
 
@@ -10,10 +12,18 @@ public class ShootingScript : MonoBehaviour {
         Free,
         Reloading
     }
-    BulletType currentBullet;
+    Bullet currentBullet;
     RaycastHit shootHit;
     ShootingState state;
+
+    public List<Bullet> bulletList { get; private set; }
+
     public GameObject Hand;
+    [SerializeField]
+    Text bulletTypeText;
+
+    float seeThroughRenewalTime = 15;
+    float seeThroughTimer;
     /// <summary>
     /// tmp
     /// </summary>
@@ -22,55 +32,95 @@ public class ShootingScript : MonoBehaviour {
 
     LineRenderer line;
     // Use this for initialization
-    void Start () {
+    void Start() {
         state = ShootingState.Free;
-        currentBullet = BulletType.None;
+        currentBullet = null;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         line = GetComponent<LineRenderer>();
         line.startWidth = 0.1f;
         line.endWidth = 0.1f;
+
+        bulletList = new List<Bullet>();
+        Bullet aggresiveBullet = new Bullet(BulletType.Aggresive);
+        aggresiveBullet.OnPickupBullet += new EventHandler(OnPickupBullet);
+        aggresiveBullet.OnShoot += new EventHandler(OnShoot);
+        bulletList.Add(aggresiveBullet);
+
+        Bullet seeThroughBullet = new Bullet(BulletType.WallVisibility);
+        seeThroughBullet.OnPickupBullet += new EventHandler(OnPickupBullet);
+        seeThroughBullet.OnShoot += new EventHandler(OnShoot);
+        bulletList.Add(seeThroughBullet);
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+
+    void OnPickupBullet(object sender, EventArgs e)
+    {
+        if(currentBullet != null)
+        if(currentBullet.type == (sender  as Bullet).type)
+            bulletTypeText.text = currentBullet.type.ToString() + "   " + currentBullet.count;
+    }
+
+    void OnShoot(object sender, EventArgs e)
+    {
+        bulletTypeText.text = currentBullet.type.ToString() + "   " + currentBullet.count;
+        if(currentBullet.type == BulletType.WallVisibility)
         {
-            currentBullet = BulletType.Aggresive;
+            seeThroughTimer = seeThroughRenewalTime;
+        }
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentBullet = bulletList.Find(bullet => bullet.type == BulletType.Aggresive);
+            bulletTypeText.text = currentBullet.type.ToString() + "   " + currentBullet.count;
             Debug.Log("Reloaded to Aggresive");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            currentBullet = BulletType.Sleep;
-            Debug.Log("Relodaded to asleep");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            currentBullet = BulletType.Blinding;
-            Debug.Log("Relodaded to blinding");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            currentBullet = BulletType.Deafening;
-            Debug.Log("Relodaded to deafening");
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            currentBullet = BulletType.WallTransmitter;
-            Debug.Log("Relodaded to wall focus");
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    currentBullet = BulletType.Sleep;
+        //    Debug.Log("Relodaded to asleep");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    currentBullet = BulletType.Blinding;
+        //    Debug.Log("Relodaded to blinding");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    currentBullet = BulletType.Deafening;
+        //    Debug.Log("Relodaded to deafening");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha5))
+        //{
+        //    currentBullet = BulletType.WallTransmitter;
+        //    Debug.Log("Relodaded to wall focus");
+        //}
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            currentBullet = BulletType.WallVisibility;
+            currentBullet = bulletList.Find(bullet => bullet.type == BulletType.WallVisibility);
+            bulletTypeText.text = currentBullet.type.ToString() + "   " + currentBullet.count;
             Debug.Log("Relodaded to wall visibility");
         }
-        if(Input.GetKeyDown(KeyCode.Alpha0))
+        //if (Input.GetKeyDown(KeyCode.Alpha0))
+        //{
+        //    currentBullet = BulletType.VFX;
+        //    Debug.Log("RAINBOOOOOOW");
+        //}
+
+        if (bulletList.Find(b => b.type == BulletType.WallVisibility).count == 0 && seeThroughTimer <= 0)
         {
-            currentBullet = BulletType.VFX;
-            Debug.Log("RAINBOOOOOOW");
+            bulletList.Find(b => b.type == BulletType.WallVisibility).PickupBullet();
+            seeThroughTimer = seeThroughRenewalTime;
+        }
+        
+        if(seeThroughTimer > 0)
+        {
+            seeThroughTimer -= Time.deltaTime;
         }
 
-        if(vfxBulletState)
+        if (vfxBulletState)
         {
             vfxButtet.transform.position = Vector3.MoveTowards(vfxButtet.transform.position, shootHit.point, 0.5f);
         }
@@ -78,12 +128,15 @@ public class ShootingScript : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && currentBullet.count > 0)
         {
             state = ShootingState.isShooting;
         }
         if (state == ShootingState.isShooting)
+        {
+            
             Shoot();
+        }
     }
 
     private void Shoot()
@@ -91,19 +144,19 @@ public class ShootingScript : MonoBehaviour {
         Ray cameraRay = new Ray(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f); // Camera.main.ScreenToWorldPoint, Camera.main.transform.forward
         if (Physics.Raycast(cameraRay, out shootHit))
         {
-            if (currentBullet != BulletType.VFX)
+            if (currentBullet.type != BulletType.VFX)
             {
                 if (shootHit.collider.tag == "Enemy")
                 {
-                    shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet);
+                    shootHit.collider.GetComponent<EnemyExtendedAI>().Inject(currentBullet.type);
                 }
                 if (shootHit.collider.tag == "Wall")
                 {
-                    if (currentBullet == BulletType.WallTransmitter)
+                    if (currentBullet.type == BulletType.WallTransmitter)
                     {
                         Instantiate(Resources.Load("WallTransmitter"), shootHit.point, Quaternion.identity);
                     }
-                    if (currentBullet == BulletType.WallVisibility)
+                    if (currentBullet.type == BulletType.WallVisibility)
                     {
                         Instantiate(Resources.Load("WallSight"), shootHit.point, Quaternion.identity);
                     }
@@ -118,6 +171,7 @@ public class ShootingScript : MonoBehaviour {
         }
         //DrawLine(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f);
         //Debug.DrawRay(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2)), Camera.main.transform.forward * 50.0f, Color.red, 22.2f);
+        currentBullet.Shoot();
         state = ShootingState.Free;
     }
 
@@ -125,5 +179,31 @@ public class ShootingScript : MonoBehaviour {
     {
         line.SetPosition(0, vect);
         line.SetPosition(1, vect2);
+    }
+
+    public class Bullet
+    {
+        public BulletType type { get; private set; }
+        public int count { get; private set; }
+        public event EventHandler OnPickupBullet;
+        public event EventHandler OnShoot;
+
+        public Bullet(BulletType type)
+        {
+            this.type = type;
+            count = 0;
+        }
+
+        public void Shoot()
+        {
+            count--;
+            OnShoot(this, new EventArgs());
+        }
+
+        public void PickupBullet()
+        {
+            count++;            
+            OnPickupBullet(this, new EventArgs());
+        }
     }
 }
