@@ -51,6 +51,11 @@ public class ShootingScript : MonoBehaviour {
         seeThroughBullet.OnPickupBullet += new EventHandler(OnPickupBullet);
         seeThroughBullet.OnShoot += new EventHandler(OnShoot);
         bulletList.Add(seeThroughBullet);
+
+        Bullet transmitterBullet = new Bullet(BulletType.WallTransmitter);
+        transmitterBullet.OnPickupBullet += new EventHandler(OnPickupBullet);
+        transmitterBullet.OnShoot += new EventHandler(OnShoot);
+        bulletList.Add(transmitterBullet);
     }
 
     void OnPickupBullet(object sender, EventArgs e)
@@ -92,11 +97,12 @@ public class ShootingScript : MonoBehaviour {
         //    currentBullet = BulletType.Deafening;
         //    Debug.Log("Relodaded to deafening");
         //}
-        //if (Input.GetKeyDown(KeyCode.Alpha5))
-        //{
-        //    currentBullet = BulletType.WallTransmitter;
-        //    Debug.Log("Relodaded to wall focus");
-        //}
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentBullet = bulletList.Find(bullet => bullet.type == BulletType.WallTransmitter);
+            bulletTypeText.text = currentBullet.type.ToString() + "   " + currentBullet.count;
+            Debug.Log("Relodaded to wall marker");
+        }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             currentBullet = bulletList.Find(bullet => bullet.type == BulletType.WallVisibility);

@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 2457a32c072ebdf418711c3c2df8c8bd
+timeCreated: 1490452887
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box017
+    100004: Box018
+    100006: Box019
+    100008: Capsule001
+    100010: Capsule002
+    100012: Capsule003
+    100014: Capsule004
+    100016: czytnik kart001
+    100018: czytnik kart002
+    100020: czytnik kart003
+    100022: drzwi
+    100024: drzwi001
+    100026: hala
+    100028: hala001
+    100030: kolumna001
+    100032: kolumna002
+    100034: kolumna003
+    100036: "pud\u0142o duze"
+    100038: "pud\u0142o duze001"
+    100040: "pud\u0142o duze002"
+    100042: "pud\u0142o duze003"
+    100044: "pud\u0142o duze004"
+    100046: "pud\u0142o duze005"
+    100048: "pud\u0142o duze006"
+    100050: StraightStair001
+    100052: StraightStair002
+    100054: czytnik kart004
+    100056: hala002
+    100058: "pud\u0142o duze007"
+    100060: "pud\u0142o duze008"
+    100062: dach
+    400000: //RootNode
+    400002: Box017
+    400004: Box018
+    400006: Box019
+    400008: Capsule001
+    400010: Capsule002
+    400012: Capsule003
+    400014: Capsule004
+    400016: czytnik kart001
+    400018: czytnik kart002
+    400020: czytnik kart003
+    400022: drzwi
+    400024: drzwi001
+    400026: hala
+    400028: hala001
+    400030: kolumna001
+    400032: kolumna002
+    400034: kolumna003
+    400036: "pud\u0142o duze"
+    400038: "pud\u0142o duze001"
+    400040: "pud\u0142o duze002"
+    400042: "pud\u0142o duze003"
+    400044: "pud\u0142o duze004"
+    400046: "pud\u0142o duze005"
+    400048: "pud\u0142o duze006"
+    400050: StraightStair001
+    400052: StraightStair002
+    400054: czytnik kart004
+    400056: hala002
+    400058: "pud\u0142o duze007"
+    400060: "pud\u0142o duze008"
+    400062: dach
+    2300000: Box017
+    2300002: Box018
+    2300004: Box019
+    2300006: Capsule001
+    2300008: Capsule002
+    2300010: Capsule003
+    2300012: Capsule004
+    2300014: czytnik kart001
+    2300016: czytnik kart002
+    2300018: czytnik kart003
+    2300020: drzwi
+    2300022: drzwi001
+    2300024: hala
+    2300026: hala001
+    2300028: kolumna001
+    2300030: kolumna002
+    2300032: kolumna003
+    2300034: "pud\u0142o duze"
+    2300036: "pud\u0142o duze001"
+    2300038: "pud\u0142o duze002"
+    2300040: "pud\u0142o duze003"
+    2300042: "pud\u0142o duze004"
+    2300044: "pud\u0142o duze005"
+    2300046: "pud\u0142o duze006"
+    2300048: StraightStair001
+    2300050: StraightStair002
+    2300052: czytnik kart004
+    2300054: hala002
+    2300056: "pud\u0142o duze007"
+    2300058: "pud\u0142o duze008"
+    2300060: dach
+    3300000: Box017
+    3300002: Box018
+    3300004: Box019
+    3300006: Capsule001
+    3300008: Capsule002
+    3300010: Capsule003
+    3300012: Capsule004
+    3300014: czytnik kart001
+    3300016: czytnik kart002
+    3300018: czytnik kart003
+    3300020: drzwi
+    3300022: drzwi001
+    3300024: hala
+    3300026: hala001
+    3300028: kolumna001
+    3300030: kolumna002
+    3300032: kolumna003
+    3300034: "pud\u0142o duze"
+    3300036: "pud\u0142o duze001"
+    3300038: "pud\u0142o duze002"
+    3300040: "pud\u0142o duze003"
+    3300042: "pud\u0142o duze004"
+    3300044: "pud\u0142o duze005"
+    3300046: "pud\u0142o duze006"
+    3300048: StraightStair001
+    3300050: StraightStair002
+    3300052: czytnik kart004
+    3300054: hala002
+    3300056: "pud\u0142o duze007"
+    3300058: "pud\u0142o duze008"
+    3300060: dach
+    4300000: hala
+    4300002: Box017
+    4300004: StraightStair001
+    4300006: Box018
+    4300008: kolumna003
+    4300010: "pud\u0142o duze"
+    4300012: drzwi
+    4300014: Capsule001
+    4300016: czytnik kart001
+    4300018: "pud\u0142o duze004"
+    4300020: "pud\u0142o duze005"
+    4300022: drzwi001
+    4300024: Capsule002
+    4300026: Capsule003
+    4300028: "pud\u0142o duze006"
+    4300030: czytnik kart002
+    4300032: Capsule004
+    4300034: hala001
+    4300036: czytnik kart003
+    4300038: "pud\u0142o duze007"
+    4300040: czytnik kart004
+    4300042: "pud\u0142o duze008"
+    4300044: hala002
+    4300046: dach
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
