@@ -134,7 +134,7 @@ public class ShootingScript : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0) && currentBullet.count > 0)
+        if (Input.GetMouseButtonDown(0) && currentBullet != null && currentBullet.count > 0 )
         {
             state = ShootingState.isShooting;
         }
