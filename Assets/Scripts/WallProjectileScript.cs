@@ -13,15 +13,15 @@ public class WallProjectileScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Collider[] enemies = Physics.OverlapSphere(this.gameObject.transform.position, radius);
+        //Collider[] enemies = Physics.OverlapSphere(this.gameObject.transform.position, radius);
 
-        foreach (Collider col in enemies)
-        {
-            if(col.gameObject.tag == "Enemy")
-            {
-                Call(col);
-            }
-        }
+        //foreach (Collider col in enemies)
+        //{
+        //    if(col.gameObject.tag == "Enemy")
+        //    {
+        //        Call(col);
+        //    }
+        //}
 
 
 
@@ -29,11 +29,11 @@ public class WallProjectileScript : MonoBehaviour {
         if (timeElapsed > 10f)
             Destroy(this.gameObject);
 	}
-
-    private void OnTriggerStay(Collider other)
+    
+    private void OnTriggerEnter(Collider other)
     {
-        //if(other.gameObject.tag == "Enemy" && this.gameObject != null)
-        // other.gameObject.GetComponent<EnemyExtendedAI>().FollowTransmitter(this.gameObject);
+        if(other.gameObject.tag == "Enemy" && this.gameObject != null)
+            other.gameObject.GetComponent<EnemyExtendedAI>().FollowTransmitter(this.gameObject);
     }
     private void Call(Collider other)
     {
