@@ -1,0 +1,1548 @@
+fileFormatVersion: 2
+guid: 8912190dd90f6c945a0494691605d031
+timeCreated: 1492338367
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: doorLock004
+    100002: doorLock005
+    100004: drzwi-duze002
+    100006: drzwi-lewa-strona002
+    100008: drzwi-prawa-strona002
+    100010: //RootNode
+    100012: mod-corridor-corner-small001
+    100014: mod-corridor-corner001
+    100016: mod-corridor-corner002
+    100018: mod-corridor-corner003
+    100020: mod-corridor-corner004
+    100022: mod-corridor-corner005
+    100024: mod-corridor-corner006
+    100026: mod-corridor-corner007
+    100028: mod-corridor-straigh-3way001
+    100030: mod-corridor-straigh-3way002
+    100032: mod-corridor-straigh-small001
+    100034: mod-corridor-straigh-small002
+    100036: mod-corridor-straigh001
+    100038: mod-corridor-straigh002
+    100040: mod-corridor-straigh003
+    100042: mod-corridor-straigh004
+    100044: mod-corridor-straigh005
+    100046: mod-corridor-straigh006
+    100048: mod-corridor-straigh007
+    100050: mod-corridor-straigh008
+    100052: mod-corridor-straigh009
+    100054: mod-corridor-straigh010
+    100056: mod-corridor-straigh011
+    100058: mod-corridor-straigh012
+    100060: mod-corridor-straigh013
+    100062: mod-corridor-straigh014
+    100064: mod-corridor-straigh015
+    100066: mod-corridor-straigh016
+    100068: mod-corridor-straigh017
+    100070: Object005
+    100072: podlog3x5m001
+    100074: podlog3x5m003
+    100076: podlog3x5m004
+    100078: podlog3x5m005
+    100080: podlog3x5m006
+    100082: podlog3x5m007
+    100084: podlog5x5m001
+    100086: podlog5x5m002
+    100088: podlog5x5m003
+    100090: podlog5x5m004
+    100092: podlog5x5m005
+    100094: podlog5x5m006
+    100096: podlog5x5m007
+    100098: podlog5x5m008
+    100100: podlog5x5m009
+    100102: podlog5x5m010
+    100104: podlog5x5m011
+    100106: podlog5x5m012
+    100108: podlog5x5m013
+    100110: podlog5x5m014
+    100112: podlog5x5m017
+    100114: podlog5x5m018
+    100116: podlog5x5m019
+    100118: podlog5x5m020
+    100120: podlog5x5m021
+    100122: podlog5x5m022
+    100124: podlog5x5m023
+    100126: podlog5x5m030
+    100128: podlog5x5m031
+    100130: podlog5x5m032
+    100132: podlog5x5m033
+    100134: podlog5x5m034
+    100136: podlog5x5m035
+    100138: podlog5x5m036
+    100140: podlog5x5m037
+    100142: podlog5x5m039
+    100144: podlog5x5m041
+    100146: podlog5x5m042
+    100148: podlog5x5m045
+    100150: podlog5x5m046
+    100152: sciana-z-otworem-na-drzwi-bok-mirror001
+    100154: sciana-z-otworem-na-drzwi-bok001
+    100156: sciana-z-otworem-na-drzwi-duze001
+    100158: sciana-z-otworem-na-drzwi-duze002
+    100160: sciana-z-otworem-na-drzwi-duze003
+    100162: sciana-z-otworem-na-drzwi-duze005
+    100164: sciana-z-otworem-na-drzwi-duze006
+    100166: sciana-z-otworem-na-drzwi-duze007
+    100168: sciana-z-otworem-na-drzwi-duze011
+    100170: sciana-z-otworem-na-drzwi-duze5x4m001
+    100172: sciana-z-otworem-na-drzwi-srodek001
+    100174: sciana3x4m001
+    100176: sciana3x4m002
+    100178: sciana3x4m003
+    100180: sciana3x4m004
+    100182: sciana3x5m001
+    100184: sciana3x5m002
+    100186: sciana3x5m003
+    100188: sciana3x5m005
+    100190: sciana3x5m007
+    100192: sciana3x5m008
+    100194: sciana3x5m009
+    100196: sciana3x5m010
+    100198: sciana5x4m001
+    100200: sciana5x4m002
+    100202: sciana5x4m003
+    100204: sciana5x4m004
+    100206: sciana5x4m005
+    100208: sciana5x4m006
+    100210: sciana5x4m007
+    100212: sciana5x4m008
+    100214: sciana5x4m009
+    100216: sciana5x4m010
+    100218: sciana5x4m011
+    100220: sciana5x4m012
+    100222: sciana5x4m013
+    100224: sciana5x5m001
+    100226: sciana5x5m002
+    100228: sciana5x5m003
+    100230: sciana5x5m004
+    100232: sciana5x5m005
+    100234: sciana5x5m006
+    100236: sciana5x5m007
+    100238: sciana5x5m008
+    100240: sciana5x5m009
+    100242: sciana5x5m010
+    100244: sciana5x5m011
+    100246: sciana5x5m012
+    100248: sciana5x5m013
+    100250: sciana5x5m014
+    100252: sciana5x5m015
+    100254: sciana5x5m016
+    100256: sciana5x5m017
+    100258: sciana5x5m030
+    100260: sciana5x5m031
+    100262: sciana5x5m032
+    100264: sciana5x5m033
+    100266: sciana5x5m034
+    100268: sciana5x5m035
+    100270: sciana5x5m036
+    100272: sciana5x5m037
+    100274: sciana5x5m038
+    100276: sciana5x5m039
+    100278: sciana5x5m040
+    100280: sciana5x5m042
+    100282: sciana5x5m044
+    100284: sciana5x5m045
+    100286: sciana5x5m046
+    100288: sciana5x5m048
+    100290: sciana5x5m050
+    100292: sciana5x5m051
+    100294: sciana5x5m052
+    100296: sciana5x5m054
+    100298: sciana5x5m055
+    100300: sciana5x5m056
+    100302: sciana5x5m058
+    100304: sciana5x5m059
+    100306: sciana5x5m062
+    100308: sciana5x5m063
+    100310: StraightStair005
+    100312: StraightStair006
+    100314: swiatlo004
+    100316: swiatlo005
+    100318: drzwi-rama002
+    100320: sciana_z_drzwiami_group001
+    400000: doorLock004
+    400002: doorLock005
+    400004: drzwi-duze002
+    400006: drzwi-lewa-strona002
+    400008: drzwi-prawa-strona002
+    400010: //RootNode
+    400012: mod-corridor-corner-small001
+    400014: mod-corridor-corner001
+    400016: mod-corridor-corner002
+    400018: mod-corridor-corner003
+    400020: mod-corridor-corner004
+    400022: mod-corridor-corner005
+    400024: mod-corridor-corner006
+    400026: mod-corridor-corner007
+    400028: mod-corridor-straigh-3way001
+    400030: mod-corridor-straigh-3way002
+    400032: mod-corridor-straigh-small001
+    400034: mod-corridor-straigh-small002
+    400036: mod-corridor-straigh001
+    400038: mod-corridor-straigh002
+    400040: mod-corridor-straigh003
+    400042: mod-corridor-straigh004
+    400044: mod-corridor-straigh005
+    400046: mod-corridor-straigh006
+    400048: mod-corridor-straigh007
+    400050: mod-corridor-straigh008
+    400052: mod-corridor-straigh009
+    400054: mod-corridor-straigh010
+    400056: mod-corridor-straigh011
+    400058: mod-corridor-straigh012
+    400060: mod-corridor-straigh013
+    400062: mod-corridor-straigh014
+    400064: mod-corridor-straigh015
+    400066: mod-corridor-straigh016
+    400068: mod-corridor-straigh017
+    400070: Object005
+    400072: podlog3x5m001
+    400074: podlog3x5m003
+    400076: podlog3x5m004
+    400078: podlog3x5m005
+    400080: podlog3x5m006
+    400082: podlog3x5m007
+    400084: podlog5x5m001
+    400086: podlog5x5m002
+    400088: podlog5x5m003
+    400090: podlog5x5m004
+    400092: podlog5x5m005
+    400094: podlog5x5m006
+    400096: podlog5x5m007
+    400098: podlog5x5m008
+    400100: podlog5x5m009
+    400102: podlog5x5m010
+    400104: podlog5x5m011
+    400106: podlog5x5m012
+    400108: podlog5x5m013
+    400110: podlog5x5m014
+    400112: podlog5x5m017
+    400114: podlog5x5m018
+    400116: podlog5x5m019
+    400118: podlog5x5m020
+    400120: podlog5x5m021
+    400122: podlog5x5m022
+    400124: podlog5x5m023
+    400126: podlog5x5m030
+    400128: podlog5x5m031
+    400130: podlog5x5m032
+    400132: podlog5x5m033
+    400134: podlog5x5m034
+    400136: podlog5x5m035
+    400138: podlog5x5m036
+    400140: podlog5x5m037
+    400142: podlog5x5m039
+    400144: podlog5x5m041
+    400146: podlog5x5m042
+    400148: podlog5x5m045
+    400150: podlog5x5m046
+    400152: sciana-z-otworem-na-drzwi-bok-mirror001
+    400154: sciana-z-otworem-na-drzwi-bok001
+    400156: sciana-z-otworem-na-drzwi-duze001
+    400158: sciana-z-otworem-na-drzwi-duze002
+    400160: sciana-z-otworem-na-drzwi-duze003
+    400162: sciana-z-otworem-na-drzwi-duze005
+    400164: sciana-z-otworem-na-drzwi-duze006
+    400166: sciana-z-otworem-na-drzwi-duze007
+    400168: sciana-z-otworem-na-drzwi-duze011
+    400170: sciana-z-otworem-na-drzwi-duze5x4m001
+    400172: sciana-z-otworem-na-drzwi-srodek001
+    400174: sciana3x4m001
+    400176: sciana3x4m002
+    400178: sciana3x4m003
+    400180: sciana3x4m004
+    400182: sciana3x5m001
+    400184: sciana3x5m002
+    400186: sciana3x5m003
+    400188: sciana3x5m005
+    400190: sciana3x5m007
+    400192: sciana3x5m008
+    400194: sciana3x5m009
+    400196: sciana3x5m010
+    400198: sciana5x4m001
+    400200: sciana5x4m002
+    400202: sciana5x4m003
+    400204: sciana5x4m004
+    400206: sciana5x4m005
+    400208: sciana5x4m006
+    400210: sciana5x4m007
+    400212: sciana5x4m008
+    400214: sciana5x4m009
+    400216: sciana5x4m010
+    400218: sciana5x4m011
+    400220: sciana5x4m012
+    400222: sciana5x4m013
+    400224: sciana5x5m001
+    400226: sciana5x5m002
+    400228: sciana5x5m003
+    400230: sciana5x5m004
+    400232: sciana5x5m005
+    400234: sciana5x5m006
+    400236: sciana5x5m007
+    400238: sciana5x5m008
+    400240: sciana5x5m009
+    400242: sciana5x5m010
+    400244: sciana5x5m011
+    400246: sciana5x5m012
+    400248: sciana5x5m013
+    400250: sciana5x5m014
+    400252: sciana5x5m015
+    400254: sciana5x5m016
+    400256: sciana5x5m017
+    400258: sciana5x5m030
+    400260: sciana5x5m031
+    400262: sciana5x5m032
+    400264: sciana5x5m033
+    400266: sciana5x5m034
+    400268: sciana5x5m035
+    400270: sciana5x5m036
+    400272: sciana5x5m037
+    400274: sciana5x5m038
+    400276: sciana5x5m039
+    400278: sciana5x5m040
+    400280: sciana5x5m042
+    400282: sciana5x5m044
+    400284: sciana5x5m045
+    400286: sciana5x5m046
+    400288: sciana5x5m048
+    400290: sciana5x5m050
+    400292: sciana5x5m051
+    400294: sciana5x5m052
+    400296: sciana5x5m054
+    400298: sciana5x5m055
+    400300: sciana5x5m056
+    400302: sciana5x5m058
+    400304: sciana5x5m059
+    400306: sciana5x5m062
+    400308: sciana5x5m063
+    400310: StraightStair005
+    400312: StraightStair006
+    400314: swiatlo004
+    400316: swiatlo005
+    400318: drzwi-rama002
+    400320: sciana_z_drzwiami_group001
+    2300000: doorLock004
+    2300002: doorLock005
+    2300004: drzwi-lewa-strona002
+    2300006: drzwi-prawa-strona002
+    2300008: mod-corridor-corner-small001
+    2300010: mod-corridor-corner001
+    2300012: mod-corridor-corner002
+    2300014: mod-corridor-corner003
+    2300016: mod-corridor-corner004
+    2300018: mod-corridor-corner005
+    2300020: mod-corridor-corner006
+    2300022: mod-corridor-corner007
+    2300024: mod-corridor-straigh-3way001
+    2300026: mod-corridor-straigh-3way002
+    2300028: mod-corridor-straigh-small001
+    2300030: mod-corridor-straigh-small002
+    2300032: mod-corridor-straigh001
+    2300034: mod-corridor-straigh002
+    2300036: mod-corridor-straigh003
+    2300038: mod-corridor-straigh004
+    2300040: mod-corridor-straigh005
+    2300042: mod-corridor-straigh006
+    2300044: mod-corridor-straigh007
+    2300046: mod-corridor-straigh008
+    2300048: mod-corridor-straigh009
+    2300050: mod-corridor-straigh010
+    2300052: mod-corridor-straigh011
+    2300054: mod-corridor-straigh012
+    2300056: mod-corridor-straigh013
+    2300058: mod-corridor-straigh014
+    2300060: mod-corridor-straigh015
+    2300062: mod-corridor-straigh016
+    2300064: mod-corridor-straigh017
+    2300066: Object005
+    2300068: podlog3x5m001
+    2300070: podlog3x5m003
+    2300072: podlog3x5m004
+    2300074: podlog3x5m005
+    2300076: podlog3x5m006
+    2300078: podlog3x5m007
+    2300080: podlog5x5m001
+    2300082: podlog5x5m002
+    2300084: podlog5x5m003
+    2300086: podlog5x5m004
+    2300088: podlog5x5m005
+    2300090: podlog5x5m006
+    2300092: podlog5x5m007
+    2300094: podlog5x5m008
+    2300096: podlog5x5m009
+    2300098: podlog5x5m010
+    2300100: podlog5x5m011
+    2300102: podlog5x5m012
+    2300104: podlog5x5m013
+    2300106: podlog5x5m014
+    2300108: podlog5x5m017
+    2300110: podlog5x5m018
+    2300112: podlog5x5m019
+    2300114: podlog5x5m020
+    2300116: podlog5x5m021
+    2300118: podlog5x5m022
+    2300120: podlog5x5m023
+    2300122: podlog5x5m030
+    2300124: podlog5x5m031
+    2300126: podlog5x5m032
+    2300128: podlog5x5m033
+    2300130: podlog5x5m034
+    2300132: podlog5x5m035
+    2300134: podlog5x5m036
+    2300136: podlog5x5m037
+    2300138: podlog5x5m039
+    2300140: podlog5x5m041
+    2300142: podlog5x5m042
+    2300144: podlog5x5m045
+    2300146: podlog5x5m046
+    2300148: sciana-z-otworem-na-drzwi-bok-mirror001
+    2300150: sciana-z-otworem-na-drzwi-bok001
+    2300152: sciana-z-otworem-na-drzwi-duze001
+    2300154: sciana-z-otworem-na-drzwi-duze002
+    2300156: sciana-z-otworem-na-drzwi-duze003
+    2300158: sciana-z-otworem-na-drzwi-duze005
+    2300160: sciana-z-otworem-na-drzwi-duze006
+    2300162: sciana-z-otworem-na-drzwi-duze007
+    2300164: sciana-z-otworem-na-drzwi-duze011
+    2300166: sciana-z-otworem-na-drzwi-duze5x4m001
+    2300168: sciana-z-otworem-na-drzwi-srodek001
+    2300170: sciana3x4m001
+    2300172: sciana3x4m002
+    2300174: sciana3x4m003
+    2300176: sciana3x4m004
+    2300178: sciana3x5m001
+    2300180: sciana3x5m002
+    2300182: sciana3x5m003
+    2300184: sciana3x5m005
+    2300186: sciana3x5m007
+    2300188: sciana3x5m008
+    2300190: sciana3x5m009
+    2300192: sciana3x5m010
+    2300194: sciana5x4m001
+    2300196: sciana5x4m002
+    2300198: sciana5x4m003
+    2300200: sciana5x4m004
+    2300202: sciana5x4m005
+    2300204: sciana5x4m006
+    2300206: sciana5x4m007
+    2300208: sciana5x4m008
+    2300210: sciana5x4m009
+    2300212: sciana5x4m010
+    2300214: sciana5x4m011
+    2300216: sciana5x4m012
+    2300218: sciana5x4m013
+    2300220: sciana5x5m001
+    2300222: sciana5x5m002
+    2300224: sciana5x5m003
+    2300226: sciana5x5m004
+    2300228: sciana5x5m005
+    2300230: sciana5x5m006
+    2300232: sciana5x5m007
+    2300234: sciana5x5m008
+    2300236: sciana5x5m009
+    2300238: sciana5x5m010
+    2300240: sciana5x5m011
+    2300242: sciana5x5m012
+    2300244: sciana5x5m013
+    2300246: sciana5x5m014
+    2300248: sciana5x5m015
+    2300250: sciana5x5m016
+    2300252: sciana5x5m017
+    2300254: sciana5x5m030
+    2300256: sciana5x5m031
+    2300258: sciana5x5m032
+    2300260: sciana5x5m033
+    2300262: sciana5x5m034
+    2300264: sciana5x5m035
+    2300266: sciana5x5m036
+    2300268: sciana5x5m037
+    2300270: sciana5x5m038
+    2300272: sciana5x5m039
+    2300274: sciana5x5m040
+    2300276: sciana5x5m042
+    2300278: sciana5x5m044
+    2300280: sciana5x5m045
+    2300282: sciana5x5m046
+    2300284: sciana5x5m048
+    2300286: sciana5x5m050
+    2300288: sciana5x5m051
+    2300290: sciana5x5m052
+    2300292: sciana5x5m054
+    2300294: sciana5x5m055
+    2300296: sciana5x5m056
+    2300298: sciana5x5m058
+    2300300: sciana5x5m059
+    2300302: sciana5x5m062
+    2300304: sciana5x5m063
+    2300306: StraightStair005
+    2300308: StraightStair006
+    2300310: swiatlo004
+    2300312: swiatlo005
+    2300314: drzwi-rama002
+    3300000: doorLock004
+    3300002: doorLock005
+    3300004: drzwi-lewa-strona002
+    3300006: drzwi-prawa-strona002
+    3300008: mod-corridor-corner-small001
+    3300010: mod-corridor-corner001
+    3300012: mod-corridor-corner002
+    3300014: mod-corridor-corner003
+    3300016: mod-corridor-corner004
+    3300018: mod-corridor-corner005
+    3300020: mod-corridor-corner006
+    3300022: mod-corridor-corner007
+    3300024: mod-corridor-straigh-3way001
+    3300026: mod-corridor-straigh-3way002
+    3300028: mod-corridor-straigh-small001
+    3300030: mod-corridor-straigh-small002
+    3300032: mod-corridor-straigh001
+    3300034: mod-corridor-straigh002
+    3300036: mod-corridor-straigh003
+    3300038: mod-corridor-straigh004
+    3300040: mod-corridor-straigh005
+    3300042: mod-corridor-straigh006
+    3300044: mod-corridor-straigh007
+    3300046: mod-corridor-straigh008
+    3300048: mod-corridor-straigh009
+    3300050: mod-corridor-straigh010
+    3300052: mod-corridor-straigh011
+    3300054: mod-corridor-straigh012
+    3300056: mod-corridor-straigh013
+    3300058: mod-corridor-straigh014
+    3300060: mod-corridor-straigh015
+    3300062: mod-corridor-straigh016
+    3300064: mod-corridor-straigh017
+    3300066: Object005
+    3300068: podlog3x5m001
+    3300070: podlog3x5m003
+    3300072: podlog3x5m004
+    3300074: podlog3x5m005
+    3300076: podlog3x5m006
+    3300078: podlog3x5m007
+    3300080: podlog5x5m001
+    3300082: podlog5x5m002
+    3300084: podlog5x5m003
+    3300086: podlog5x5m004
+    3300088: podlog5x5m005
+    3300090: podlog5x5m006
+    3300092: podlog5x5m007
+    3300094: podlog5x5m008
+    3300096: podlog5x5m009
+    3300098: podlog5x5m010
+    3300100: podlog5x5m011
+    3300102: podlog5x5m012
+    3300104: podlog5x5m013
+    3300106: podlog5x5m014
+    3300108: podlog5x5m017
+    3300110: podlog5x5m018
+    3300112: podlog5x5m019
+    3300114: podlog5x5m020
+    3300116: podlog5x5m021
+    3300118: podlog5x5m022
+    3300120: podlog5x5m023
+    3300122: podlog5x5m030
+    3300124: podlog5x5m031
+    3300126: podlog5x5m032
+    3300128: podlog5x5m033
+    3300130: podlog5x5m034
+    3300132: podlog5x5m035
+    3300134: podlog5x5m036
+    3300136: podlog5x5m037
+    3300138: podlog5x5m039
+    3300140: podlog5x5m041
+    3300142: podlog5x5m042
+    3300144: podlog5x5m045
+    3300146: podlog5x5m046
+    3300148: sciana-z-otworem-na-drzwi-bok-mirror001
+    3300150: sciana-z-otworem-na-drzwi-bok001
+    3300152: sciana-z-otworem-na-drzwi-duze001
+    3300154: sciana-z-otworem-na-drzwi-duze002
+    3300156: sciana-z-otworem-na-drzwi-duze003
+    3300158: sciana-z-otworem-na-drzwi-duze005
+    3300160: sciana-z-otworem-na-drzwi-duze006
+    3300162: sciana-z-otworem-na-drzwi-duze007
+    3300164: sciana-z-otworem-na-drzwi-duze011
+    3300166: sciana-z-otworem-na-drzwi-duze5x4m001
+    3300168: sciana-z-otworem-na-drzwi-srodek001
+    3300170: sciana3x4m001
+    3300172: sciana3x4m002
+    3300174: sciana3x4m003
+    3300176: sciana3x4m004
+    3300178: sciana3x5m001
+    3300180: sciana3x5m002
+    3300182: sciana3x5m003
+    3300184: sciana3x5m005
+    3300186: sciana3x5m007
+    3300188: sciana3x5m008
+    3300190: sciana3x5m009
+    3300192: sciana3x5m010
+    3300194: sciana5x4m001
+    3300196: sciana5x4m002
+    3300198: sciana5x4m003
+    3300200: sciana5x4m004
+    3300202: sciana5x4m005
+    3300204: sciana5x4m006
+    3300206: sciana5x4m007
+    3300208: sciana5x4m008
+    3300210: sciana5x4m009
+    3300212: sciana5x4m010
+    3300214: sciana5x4m011
+    3300216: sciana5x4m012
+    3300218: sciana5x4m013
+    3300220: sciana5x5m001
+    3300222: sciana5x5m002
+    3300224: sciana5x5m003
+    3300226: sciana5x5m004
+    3300228: sciana5x5m005
+    3300230: sciana5x5m006
+    3300232: sciana5x5m007
+    3300234: sciana5x5m008
+    3300236: sciana5x5m009
+    3300238: sciana5x5m010
+    3300240: sciana5x5m011
+    3300242: sciana5x5m012
+    3300244: sciana5x5m013
+    3300246: sciana5x5m014
+    3300248: sciana5x5m015
+    3300250: sciana5x5m016
+    3300252: sciana5x5m017
+    3300254: sciana5x5m030
+    3300256: sciana5x5m031
+    3300258: sciana5x5m032
+    3300260: sciana5x5m033
+    3300262: sciana5x5m034
+    3300264: sciana5x5m035
+    3300266: sciana5x5m036
+    3300268: sciana5x5m037
+    3300270: sciana5x5m038
+    3300272: sciana5x5m039
+    3300274: sciana5x5m040
+    3300276: sciana5x5m042
+    3300278: sciana5x5m044
+    3300280: sciana5x5m045
+    3300282: sciana5x5m046
+    3300284: sciana5x5m048
+    3300286: sciana5x5m050
+    3300288: sciana5x5m051
+    3300290: sciana5x5m052
+    3300292: sciana5x5m054
+    3300294: sciana5x5m055
+    3300296: sciana5x5m056
+    3300298: sciana5x5m058
+    3300300: sciana5x5m059
+    3300302: sciana5x5m062
+    3300304: sciana5x5m063
+    3300306: StraightStair005
+    3300308: StraightStair006
+    3300310: swiatlo004
+    3300312: swiatlo005
+    3300314: drzwi-rama002
+    4300000: mod-corridor-straigh001
+    4300002: mod-corridor-corner001
+    4300004: mod-corridor-straigh-3way001
+    4300006: sciana-z-otworem-na-drzwi-duze001
+    4300008: podlog5x5m001
+    4300010: sciana5x5m001
+    4300012: podlog3x5m001
+    4300014: sciana3x5m001
+    4300016: sciana-z-otworem-na-drzwi-srodek001
+    4300018: mod-corridor-corner-small001
+    4300020: mod-corridor-straigh-small001
+    4300022: sciana-z-otworem-na-drzwi-bok-mirror001
+    4300024: sciana-z-otworem-na-drzwi-bok001
+    4300026: podlog3x5m007
+    4300028: sciana5x4m001
+    4300030: sciana3x4m001
+    4300032: sciana-z-otworem-na-drzwi-duze5x4m001
+    4300034: StraightStair005
+    4300036: Object005
+    4300038: doorLock004
+    4300040: drzwi-lewa-strona002
+    4300042: drzwi-prawa-strona002
+    4300044: swiatlo004
+    4300046: sciana-z-otworem-na-drzwi-duze011
+    4300048: mod-corridor-straigh002
+    4300050: mod-corridor-straigh003
+    4300052: mod-corridor-straigh004
+    4300054: mod-corridor-straigh005
+    4300056: mod-corridor-straigh006
+    4300058: mod-corridor-straigh007
+    4300060: mod-corridor-straigh008
+    4300062: mod-corridor-corner002
+    4300064: mod-corridor-straigh009
+    4300066: podlog5x5m002
+    4300068: sciana5x5m002
+    4300070: podlog5x5m003
+    4300072: podlog5x5m004
+    4300074: podlog5x5m005
+    4300076: podlog5x5m006
+    4300078: podlog5x5m007
+    4300080: podlog5x5m008
+    4300082: podlog5x5m009
+    4300084: podlog5x5m010
+    4300086: podlog5x5m011
+    4300088: podlog5x5m012
+    4300090: sciana3x5m002
+    4300092: sciana5x5m003
+    4300094: sciana5x5m004
+    4300096: sciana5x5m005
+    4300098: sciana5x5m006
+    4300100: sciana-z-otworem-na-drzwi-duze002
+    4300102: sciana5x5m007
+    4300104: sciana5x5m008
+    4300106: sciana5x5m009
+    4300108: sciana5x5m010
+    4300110: sciana5x5m011
+    4300112: sciana5x5m012
+    4300114: mod-corridor-straigh010
+    4300116: mod-corridor-straigh011
+    4300118: mod-corridor-straigh-3way002
+    4300120: mod-corridor-straigh012
+    4300122: mod-corridor-corner003
+    4300124: mod-corridor-corner004
+    4300126: mod-corridor-straigh013
+    4300128: podlog5x5m013
+    4300130: podlog5x5m014
+    4300132: sciana5x5m013
+    4300134: sciana5x5m014
+    4300136: sciana5x5m015
+    4300138: sciana5x5m016
+    4300140: sciana5x5m017
+    4300142: mod-corridor-straigh014
+    4300144: sciana-z-otworem-na-drzwi-duze003
+    4300146: podlog5x5m017
+    4300148: podlog5x5m018
+    4300150: mod-corridor-corner005
+    4300152: podlog5x5m019
+    4300154: podlog5x5m020
+    4300156: podlog5x5m021
+    4300158: podlog5x5m022
+    4300160: sciana5x5m030
+    4300162: podlog5x5m023
+    4300164: sciana5x5m031
+    4300166: sciana5x5m032
+    4300168: sciana5x5m033
+    4300170: sciana5x5m034
+    4300172: sciana5x5m035
+    4300174: sciana5x5m036
+    4300176: sciana5x5m037
+    4300178: sciana5x5m038
+    4300180: sciana5x5m039
+    4300182: sciana5x5m040
+    4300184: podlog5x5m030
+    4300186: podlog5x5m031
+    4300188: podlog5x5m032
+    4300190: sciana5x5m042
+    4300192: sciana5x5m044
+    4300194: sciana3x5m003
+    4300196: sciana3x5m005
+    4300198: mod-corridor-straigh015
+    4300200: mod-corridor-straigh016
+    4300202: mod-corridor-corner006
+    4300204: mod-corridor-straigh017
+    4300206: podlog5x5m033
+    4300208: podlog5x5m034
+    4300210: podlog5x5m035
+    4300212: podlog5x5m036
+    4300214: podlog5x5m037
+    4300216: podlog5x5m039
+    4300218: mod-corridor-corner007
+    4300220: podlog5x5m041
+    4300222: podlog5x5m042
+    4300224: podlog3x5m003
+    4300226: podlog3x5m004
+    4300228: sciana5x5m045
+    4300230: sciana5x5m046
+    4300232: mod-corridor-straigh-small002
+    4300234: sciana5x5m048
+    4300236: sciana5x5m050
+    4300238: sciana5x5m051
+    4300240: sciana5x5m052
+    4300242: sciana-z-otworem-na-drzwi-duze005
+    4300244: sciana-z-otworem-na-drzwi-duze006
+    4300246: sciana5x5m054
+    4300248: sciana5x5m055
+    4300250: sciana5x5m056
+    4300252: sciana5x5m058
+    4300254: sciana3x5m007
+    4300256: sciana3x5m008
+    4300258: sciana5x5m059
+    4300260: sciana-z-otworem-na-drzwi-duze007
+    4300262: podlog5x5m045
+    4300264: sciana5x5m062
+    4300266: sciana5x5m063
+    4300268: podlog5x5m046
+    4300270: podlog3x5m005
+    4300272: sciana3x5m009
+    4300274: sciana3x5m010
+    4300276: podlog3x5m006
+    4300278: sciana5x4m002
+    4300280: sciana5x4m003
+    4300282: sciana5x4m004
+    4300284: sciana5x4m005
+    4300286: sciana5x4m006
+    4300288: sciana5x4m007
+    4300290: sciana5x4m008
+    4300292: sciana5x4m009
+    4300294: sciana5x4m010
+    4300296: sciana5x4m011
+    4300298: sciana5x4m012
+    4300300: sciana5x4m013
+    4300302: sciana3x4m002
+    4300304: sciana3x4m003
+    4300306: sciana3x4m004
+    4300308: StraightStair006
+    4300310: drzwi-rama002
+    7400000: Otworzenie drzwi
+    7400002: zamkniecie drzwi
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Otworzenie drzwi
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mod-corridor-corner-small001
+        weight: 1
+      - path: mod-corridor-corner001
+        weight: 1
+      - path: mod-corridor-corner002
+        weight: 1
+      - path: mod-corridor-corner003
+        weight: 1
+      - path: mod-corridor-corner004
+        weight: 1
+      - path: mod-corridor-corner005
+        weight: 1
+      - path: mod-corridor-corner006
+        weight: 1
+      - path: mod-corridor-corner007
+        weight: 1
+      - path: mod-corridor-straigh-3way001
+        weight: 1
+      - path: mod-corridor-straigh-3way002
+        weight: 1
+      - path: mod-corridor-straigh-small001
+        weight: 1
+      - path: mod-corridor-straigh-small002
+        weight: 1
+      - path: mod-corridor-straigh001
+        weight: 1
+      - path: mod-corridor-straigh002
+        weight: 1
+      - path: mod-corridor-straigh003
+        weight: 1
+      - path: mod-corridor-straigh004
+        weight: 1
+      - path: mod-corridor-straigh005
+        weight: 1
+      - path: mod-corridor-straigh006
+        weight: 1
+      - path: mod-corridor-straigh007
+        weight: 1
+      - path: mod-corridor-straigh008
+        weight: 1
+      - path: mod-corridor-straigh009
+        weight: 1
+      - path: mod-corridor-straigh010
+        weight: 1
+      - path: mod-corridor-straigh011
+        weight: 1
+      - path: mod-corridor-straigh012
+        weight: 1
+      - path: mod-corridor-straigh013
+        weight: 1
+      - path: mod-corridor-straigh014
+        weight: 1
+      - path: mod-corridor-straigh015
+        weight: 1
+      - path: mod-corridor-straigh016
+        weight: 1
+      - path: mod-corridor-straigh017
+        weight: 1
+      - path: podlog3x5m001
+        weight: 1
+      - path: podlog3x5m003
+        weight: 1
+      - path: podlog3x5m004
+        weight: 1
+      - path: podlog3x5m005
+        weight: 1
+      - path: podlog3x5m006
+        weight: 1
+      - path: podlog3x5m007
+        weight: 1
+      - path: podlog5x5m001
+        weight: 1
+      - path: podlog5x5m002
+        weight: 1
+      - path: podlog5x5m003
+        weight: 1
+      - path: podlog5x5m004
+        weight: 1
+      - path: podlog5x5m005
+        weight: 1
+      - path: podlog5x5m006
+        weight: 1
+      - path: podlog5x5m007
+        weight: 1
+      - path: podlog5x5m008
+        weight: 1
+      - path: podlog5x5m009
+        weight: 1
+      - path: podlog5x5m010
+        weight: 1
+      - path: podlog5x5m011
+        weight: 1
+      - path: podlog5x5m012
+        weight: 1
+      - path: podlog5x5m013
+        weight: 1
+      - path: podlog5x5m014
+        weight: 1
+      - path: podlog5x5m017
+        weight: 1
+      - path: podlog5x5m018
+        weight: 1
+      - path: podlog5x5m019
+        weight: 1
+      - path: podlog5x5m020
+        weight: 1
+      - path: podlog5x5m021
+        weight: 1
+      - path: podlog5x5m022
+        weight: 1
+      - path: podlog5x5m023
+        weight: 1
+      - path: podlog5x5m030
+        weight: 1
+      - path: podlog5x5m031
+        weight: 1
+      - path: podlog5x5m032
+        weight: 1
+      - path: podlog5x5m033
+        weight: 1
+      - path: podlog5x5m034
+        weight: 1
+      - path: podlog5x5m035
+        weight: 1
+      - path: podlog5x5m036
+        weight: 1
+      - path: podlog5x5m037
+        weight: 1
+      - path: podlog5x5m039
+        weight: 1
+      - path: podlog5x5m041
+        weight: 1
+      - path: podlog5x5m042
+        weight: 1
+      - path: podlog5x5m045
+        weight: 1
+      - path: podlog5x5m046
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-bok-mirror001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-bok001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze002
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze003
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze005
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze5x4m001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze006
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze007
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-srodek001
+        weight: 1
+      - path: sciana3x4m001
+        weight: 1
+      - path: sciana3x4m002
+        weight: 1
+      - path: sciana3x4m003
+        weight: 1
+      - path: sciana3x4m004
+        weight: 1
+      - path: sciana3x5m001
+        weight: 1
+      - path: sciana3x5m002
+        weight: 1
+      - path: sciana3x5m003
+        weight: 1
+      - path: sciana3x5m005
+        weight: 1
+      - path: sciana3x5m007
+        weight: 1
+      - path: sciana3x5m008
+        weight: 1
+      - path: sciana3x5m009
+        weight: 1
+      - path: sciana3x5m010
+        weight: 1
+      - path: sciana5x4m001
+        weight: 1
+      - path: sciana5x4m002
+        weight: 1
+      - path: sciana5x4m003
+        weight: 1
+      - path: sciana5x4m004
+        weight: 1
+      - path: sciana5x4m005
+        weight: 1
+      - path: sciana5x4m006
+        weight: 1
+      - path: sciana5x4m007
+        weight: 1
+      - path: sciana5x4m008
+        weight: 1
+      - path: sciana5x4m009
+        weight: 1
+      - path: sciana5x4m010
+        weight: 1
+      - path: sciana5x4m011
+        weight: 1
+      - path: sciana5x4m012
+        weight: 1
+      - path: sciana5x4m013
+        weight: 1
+      - path: sciana5x5m001
+        weight: 1
+      - path: sciana5x5m002
+        weight: 1
+      - path: sciana5x5m003
+        weight: 1
+      - path: sciana5x5m004
+        weight: 1
+      - path: sciana5x5m005
+        weight: 1
+      - path: sciana5x5m006
+        weight: 1
+      - path: sciana5x5m007
+        weight: 1
+      - path: sciana5x5m008
+        weight: 1
+      - path: sciana5x5m009
+        weight: 1
+      - path: sciana5x5m010
+        weight: 1
+      - path: sciana5x5m011
+        weight: 1
+      - path: sciana5x5m012
+        weight: 1
+      - path: sciana5x5m013
+        weight: 1
+      - path: sciana5x5m014
+        weight: 1
+      - path: sciana5x5m015
+        weight: 1
+      - path: sciana5x5m016
+        weight: 1
+      - path: sciana5x5m017
+        weight: 1
+      - path: sciana5x5m030
+        weight: 1
+      - path: sciana5x5m031
+        weight: 1
+      - path: sciana5x5m032
+        weight: 1
+      - path: sciana5x5m033
+        weight: 1
+      - path: sciana5x5m034
+        weight: 1
+      - path: sciana5x5m035
+        weight: 1
+      - path: sciana5x5m036
+        weight: 1
+      - path: sciana5x5m037
+        weight: 1
+      - path: sciana5x5m038
+        weight: 1
+      - path: sciana5x5m039
+        weight: 1
+      - path: sciana5x5m040
+        weight: 1
+      - path: sciana5x5m042
+        weight: 1
+      - path: sciana5x5m044
+        weight: 1
+      - path: sciana5x5m045
+        weight: 1
+      - path: sciana5x5m046
+        weight: 1
+      - path: sciana5x5m048
+        weight: 1
+      - path: sciana5x5m050
+        weight: 1
+      - path: sciana5x5m051
+        weight: 1
+      - path: sciana5x5m052
+        weight: 1
+      - path: sciana5x5m054
+        weight: 1
+      - path: sciana5x5m055
+        weight: 1
+      - path: sciana5x5m056
+        weight: 1
+      - path: sciana5x5m058
+        weight: 1
+      - path: sciana5x5m059
+        weight: 1
+      - path: sciana5x5m062
+        weight: 1
+      - path: sciana5x5m063
+        weight: 1
+      - path: sciana_z_drzwiami_group001
+        weight: 1
+      - path: sciana_z_drzwiami_group001/drzwi-lewa-strona002
+        weight: 1
+      - path: sciana_z_drzwiami_group001/drzwi-prawa-strona002
+        weight: 1
+      - path: sciana_z_drzwiami_group001/drzwi-rama002
+        weight: 1
+      - path: sciana_z_drzwiami_group001/sciana-z-otworem-na-drzwi-duze011
+        weight: 1
+      - path: StraightStair005
+        weight: 1
+      - path: StraightStair006
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: zamkniecie drzwi
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 105
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mod-corridor-corner-small001
+        weight: 1
+      - path: mod-corridor-corner001
+        weight: 1
+      - path: mod-corridor-corner002
+        weight: 1
+      - path: mod-corridor-corner003
+        weight: 1
+      - path: mod-corridor-corner004
+        weight: 1
+      - path: mod-corridor-corner005
+        weight: 1
+      - path: mod-corridor-corner006
+        weight: 1
+      - path: mod-corridor-corner007
+        weight: 1
+      - path: mod-corridor-straigh-3way001
+        weight: 1
+      - path: mod-corridor-straigh-3way002
+        weight: 1
+      - path: mod-corridor-straigh-small001
+        weight: 1
+      - path: mod-corridor-straigh-small002
+        weight: 1
+      - path: mod-corridor-straigh001
+        weight: 1
+      - path: mod-corridor-straigh002
+        weight: 1
+      - path: mod-corridor-straigh003
+        weight: 1
+      - path: mod-corridor-straigh004
+        weight: 1
+      - path: mod-corridor-straigh005
+        weight: 1
+      - path: mod-corridor-straigh006
+        weight: 1
+      - path: mod-corridor-straigh007
+        weight: 1
+      - path: mod-corridor-straigh008
+        weight: 1
+      - path: mod-corridor-straigh009
+        weight: 1
+      - path: mod-corridor-straigh010
+        weight: 1
+      - path: mod-corridor-straigh011
+        weight: 1
+      - path: mod-corridor-straigh012
+        weight: 1
+      - path: mod-corridor-straigh013
+        weight: 1
+      - path: mod-corridor-straigh014
+        weight: 1
+      - path: mod-corridor-straigh015
+        weight: 1
+      - path: mod-corridor-straigh016
+        weight: 1
+      - path: mod-corridor-straigh017
+        weight: 1
+      - path: podlog3x5m001
+        weight: 1
+      - path: podlog3x5m003
+        weight: 1
+      - path: podlog3x5m004
+        weight: 1
+      - path: podlog3x5m005
+        weight: 1
+      - path: podlog3x5m006
+        weight: 1
+      - path: podlog3x5m007
+        weight: 1
+      - path: podlog5x5m001
+        weight: 1
+      - path: podlog5x5m002
+        weight: 1
+      - path: podlog5x5m003
+        weight: 1
+      - path: podlog5x5m004
+        weight: 1
+      - path: podlog5x5m005
+        weight: 1
+      - path: podlog5x5m006
+        weight: 1
+      - path: podlog5x5m007
+        weight: 1
+      - path: podlog5x5m008
+        weight: 1
+      - path: podlog5x5m009
+        weight: 1
+      - path: podlog5x5m010
+        weight: 1
+      - path: podlog5x5m011
+        weight: 1
+      - path: podlog5x5m012
+        weight: 1
+      - path: podlog5x5m013
+        weight: 1
+      - path: podlog5x5m014
+        weight: 1
+      - path: podlog5x5m017
+        weight: 1
+      - path: podlog5x5m018
+        weight: 1
+      - path: podlog5x5m019
+        weight: 1
+      - path: podlog5x5m020
+        weight: 1
+      - path: podlog5x5m021
+        weight: 1
+      - path: podlog5x5m022
+        weight: 1
+      - path: podlog5x5m023
+        weight: 1
+      - path: podlog5x5m030
+        weight: 1
+      - path: podlog5x5m031
+        weight: 1
+      - path: podlog5x5m032
+        weight: 1
+      - path: podlog5x5m033
+        weight: 1
+      - path: podlog5x5m034
+        weight: 1
+      - path: podlog5x5m035
+        weight: 1
+      - path: podlog5x5m036
+        weight: 1
+      - path: podlog5x5m037
+        weight: 1
+      - path: podlog5x5m039
+        weight: 1
+      - path: podlog5x5m041
+        weight: 1
+      - path: podlog5x5m042
+        weight: 1
+      - path: podlog5x5m045
+        weight: 1
+      - path: podlog5x5m046
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-bok-mirror001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-bok001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze002
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze003
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze005
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze5x4m001
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze006
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-duze007
+        weight: 1
+      - path: sciana-z-otworem-na-drzwi-srodek001
+        weight: 1
+      - path: sciana3x4m001
+        weight: 1
+      - path: sciana3x4m002
+        weight: 1
+      - path: sciana3x4m003
+        weight: 1
+      - path: sciana3x4m004
+        weight: 1
+      - path: sciana3x5m001
+        weight: 1
+      - path: sciana3x5m002
+        weight: 1
+      - path: sciana3x5m003
+        weight: 1
+      - path: sciana3x5m005
+        weight: 1
+      - path: sciana3x5m007
+        weight: 1
+      - path: sciana3x5m008
+        weight: 1
+      - path: sciana3x5m009
+        weight: 1
+      - path: sciana3x5m010
+        weight: 1
+      - path: sciana5x4m001
+        weight: 1
+      - path: sciana5x4m002
+        weight: 1
+      - path: sciana5x4m003
+        weight: 1
+      - path: sciana5x4m004
+        weight: 1
+      - path: sciana5x4m005
+        weight: 1
+      - path: sciana5x4m006
+        weight: 1
+      - path: sciana5x4m007
+        weight: 1
+      - path: sciana5x4m008
+        weight: 1
+      - path: sciana5x4m009
+        weight: 1
+      - path: sciana5x4m010
+        weight: 1
+      - path: sciana5x4m011
+        weight: 1
+      - path: sciana5x4m012
+        weight: 1
+      - path: sciana5x4m013
+        weight: 1
+      - path: sciana5x5m001
+        weight: 1
+      - path: sciana5x5m002
+        weight: 1
+      - path: sciana5x5m003
+        weight: 1
+      - path: sciana5x5m004
+        weight: 1
+      - path: sciana5x5m005
+        weight: 1
+      - path: sciana5x5m006
+        weight: 1
+      - path: sciana5x5m007
+        weight: 1
+      - path: sciana5x5m008
+        weight: 1
+      - path: sciana5x5m009
+        weight: 1
+      - path: sciana5x5m010
+        weight: 1
+      - path: sciana5x5m011
+        weight: 1
+      - path: sciana5x5m012
+        weight: 1
+      - path: sciana5x5m013
+        weight: 1
+      - path: sciana5x5m014
+        weight: 1
+      - path: sciana5x5m015
+        weight: 1
+      - path: sciana5x5m016
+        weight: 1
+      - path: sciana5x5m017
+        weight: 1
+      - path: sciana5x5m030
+        weight: 1
+      - path: sciana5x5m031
+        weight: 1
+      - path: sciana5x5m032
+        weight: 1
+      - path: sciana5x5m033
+        weight: 1
+      - path: sciana5x5m034
+        weight: 1
+      - path: sciana5x5m035
+        weight: 1
+      - path: sciana5x5m036
+        weight: 1
+      - path: sciana5x5m037
+        weight: 1
+      - path: sciana5x5m038
+        weight: 1
+      - path: sciana5x5m039
+        weight: 1
+      - path: sciana5x5m040
+        weight: 1
+      - path: sciana5x5m042
+        weight: 1
+      - path: sciana5x5m044
+        weight: 1
+      - path: sciana5x5m045
+        weight: 1
+      - path: sciana5x5m046
+        weight: 1
+      - path: sciana5x5m048
+        weight: 1
+      - path: sciana5x5m050
+        weight: 1
+      - path: sciana5x5m051
+        weight: 1
+      - path: sciana5x5m052
+        weight: 1
+      - path: sciana5x5m054
+        weight: 1
+      - path: sciana5x5m055
+        weight: 1
+      - path: sciana5x5m056
+        weight: 1
+      - path: sciana5x5m058
+        weight: 1
+      - path: sciana5x5m059
+        weight: 1
+      - path: sciana5x5m062
+        weight: 1
+      - path: sciana5x5m063
+        weight: 1
+      - path: sciana_z_drzwiami_group001
+        weight: 1
+      - path: sciana_z_drzwiami_group001/drzwi-lewa-strona002
+        weight: 1
+      - path: sciana_z_drzwiami_group001/drzwi-prawa-strona002
+        weight: 1
+      - path: sciana_z_drzwiami_group001/drzwi-rama002
+        weight: 1
+      - path: sciana_z_drzwiami_group001/sciana-z-otworem-na-drzwi-duze011
+        weight: 1
+      - path: StraightStair005
+        weight: 1
+      - path: StraightStair006
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

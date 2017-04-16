@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: bfb942ed9cf06ee4ba337d2269321c36
+timeCreated: 1491750981
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BigBox001
+    100002: biurko
+    100004: biurkoZMikroskopem
+    100006: box-corridor-corner-small004
+    100008: box-corridor-corner001
+    100010: Box020
+    100012: Box021
+    100014: 'butla z tlenem '
+    100016: butla z tlenem 001
+    100018: czytnik kart005
+    100020: czytnik kart006
+    100022: drzwi
+    100024: drzwi001
+    100026: drzwi002
+    100028: karta do drzwi
+    100030: lozko
+    100032: //RootNode
+    100034: mikroskop
+    100036: minidesk004
+    100038: minidesk005
+    100040: minidesk006
+    100042: minidesk007
+    100044: monitor024
+    100046: monitor025
+    100048: monitor027
+    100050: monitor028
+    100052: monitor029
+    100054: monitor030
+    100056: roomWithKey
+    100058: RoomWithTurn
+    100060: scianka dzialowa
+    100062: scianka dzialowa001
+    100064: smallBox
+    100066: smallBox001
+    100068: smallBox002
+    100070: smallBox003
+    100072: smallBox004
+    100074: smallBox006
+    100076: smallBox007
+    100078: szafa
+    100080: szafa001
+    100082: szyba
+    100084: szyna mikroskopu
+    100086: urzadzeniePrzyScianie
+    400000: BigBox001
+    400002: biurko
+    400004: biurkoZMikroskopem
+    400006: box-corridor-corner-small004
+    400008: box-corridor-corner001
+    400010: Box020
+    400012: Box021
+    400014: 'butla z tlenem '
+    400016: butla z tlenem 001
+    400018: czytnik kart005
+    400020: czytnik kart006
+    400022: drzwi
+    400024: drzwi001
+    400026: drzwi002
+    400028: karta do drzwi
+    400030: lozko
+    400032: //RootNode
+    400034: mikroskop
+    400036: minidesk004
+    400038: minidesk005
+    400040: minidesk006
+    400042: minidesk007
+    400044: monitor024
+    400046: monitor025
+    400048: monitor027
+    400050: monitor028
+    400052: monitor029
+    400054: monitor030
+    400056: roomWithKey
+    400058: RoomWithTurn
+    400060: scianka dzialowa
+    400062: scianka dzialowa001
+    400064: smallBox
+    400066: smallBox001
+    400068: smallBox002
+    400070: smallBox003
+    400072: smallBox004
+    400074: smallBox006
+    400076: smallBox007
+    400078: szafa
+    400080: szafa001
+    400082: szyba
+    400084: szyna mikroskopu
+    400086: urzadzeniePrzyScianie
+    2300000: BigBox001
+    2300002: biurko
+    2300004: biurkoZMikroskopem
+    2300006: box-corridor-corner-small004
+    2300008: box-corridor-corner001
+    2300010: Box020
+    2300012: Box021
+    2300014: 'butla z tlenem '
+    2300016: butla z tlenem 001
+    2300018: czytnik kart005
+    2300020: czytnik kart006
+    2300022: drzwi
+    2300024: drzwi001
+    2300026: drzwi002
+    2300028: karta do drzwi
+    2300030: lozko
+    2300032: mikroskop
+    2300034: minidesk004
+    2300036: minidesk005
+    2300038: minidesk006
+    2300040: minidesk007
+    2300042: monitor024
+    2300044: monitor025
+    2300046: monitor027
+    2300048: monitor028
+    2300050: monitor029
+    2300052: monitor030
+    2300054: roomWithKey
+    2300056: RoomWithTurn
+    2300058: scianka dzialowa
+    2300060: scianka dzialowa001
+    2300062: smallBox
+    2300064: smallBox001
+    2300066: smallBox002
+    2300068: smallBox003
+    2300070: smallBox004
+    2300072: smallBox006
+    2300074: smallBox007
+    2300076: szafa
+    2300078: szafa001
+    2300080: szyba
+    2300082: szyna mikroskopu
+    2300084: urzadzeniePrzyScianie
+    3300000: BigBox001
+    3300002: biurko
+    3300004: biurkoZMikroskopem
+    3300006: box-corridor-corner-small004
+    3300008: box-corridor-corner001
+    3300010: Box020
+    3300012: Box021
+    3300014: 'butla z tlenem '
+    3300016: butla z tlenem 001
+    3300018: czytnik kart005
+    3300020: czytnik kart006
+    3300022: drzwi
+    3300024: drzwi001
+    3300026: drzwi002
+    3300028: karta do drzwi
+    3300030: lozko
+    3300032: mikroskop
+    3300034: minidesk004
+    3300036: minidesk005
+    3300038: minidesk006
+    3300040: minidesk007
+    3300042: monitor024
+    3300044: monitor025
+    3300046: monitor027
+    3300048: monitor028
+    3300050: monitor029
+    3300052: monitor030
+    3300054: roomWithKey
+    3300056: RoomWithTurn
+    3300058: scianka dzialowa
+    3300060: scianka dzialowa001
+    3300062: smallBox
+    3300064: smallBox001
+    3300066: smallBox002
+    3300068: smallBox003
+    3300070: smallBox004
+    3300072: smallBox006
+    3300074: smallBox007
+    3300076: szafa
+    3300078: szafa001
+    3300080: szyba
+    3300082: szyna mikroskopu
+    3300084: urzadzeniePrzyScianie
+    4300000: RoomWithTurn
+    4300002: scianka dzialowa
+    4300004: scianka dzialowa001
+    4300006: Box020
+    4300008: urzadzeniePrzyScianie
+    4300010: BigBox001
+    4300012: smallBox
+    4300014: smallBox001
+    4300016: smallBox002
+    4300018: smallBox003
+    4300020: smallBox004
+    4300022: smallBox006
+    4300024: drzwi001
+    4300026: drzwi
+    4300028: czytnik kart005
+    4300030: smallBox007
+    4300032: Box021
+    4300034: minidesk004
+    4300036: monitor024
+    4300038: monitor025
+    4300040: roomWithKey
+    4300042: box-corridor-corner001
+    4300044: box-corridor-corner-small004
+    4300046: szyba
+    4300048: minidesk005
+    4300050: monitor027
+    4300052: monitor028
+    4300054: minidesk006
+    4300056: minidesk007
+    4300058: monitor029
+    4300060: monitor030
+    4300062: lozko
+    4300064: drzwi002
+    4300066: biurko
+    4300068: szafa
+    4300070: szafa001
+    4300072: 'butla z tlenem '
+    4300074: butla z tlenem 001
+    4300076: czytnik kart006
+    4300078: karta do drzwi
+    4300080: biurkoZMikroskopem
+    4300082: szyna mikroskopu
+    4300084: mikroskop
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
